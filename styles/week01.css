@@ -1,5 +1,5 @@
 :root { 
-    --primary-color: black;
+    --primary-color: rgb(84, 86, 93);
     --secondary-color: white;
     --accent1-color: white;
     --accent2-color: rgb(229, 14, 222);
@@ -38,6 +38,7 @@ h2 {
     text-align: center;
     background-color: black;
     color: white;
+    margin: 0;
 }
 
 .main-container {
@@ -47,6 +48,7 @@ h2 {
 
 .about-me, .student-photo {
     margin: 1%;
+    background-color: lightgray;
 }
 
 
@@ -126,59 +128,6 @@ footer {
     display: flex;
   }
 
-  .main-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    gap: 1.5rem;
-  }
-
-  .bio-section,
-  .get-in-touch {
-    width: 90%;
-    max-width: 400px;
-    margin: 1rem auto;
-    box-sizing: border-box;
-  }
-
-  .bio-section article {
-    flex-direction: column;
-    text-align: center;
-    padding: 1rem;
-  }
-
-  .bio-section article img {
-    width: 70%;
-    max-width: 250px;
-    margin: 1rem auto 0;
-    display: block;
-  }
-
-  .get-in-touch {
-    margin: 1rem auto;
-    text-align: center;
-  }
-
-  .get-in-touch form {
-    width: 100%;
-    padding: 1rem;
-    box-sizing: border-box;
-  }
-
-  input,
-  textarea {
-    font-size: 1em;
-  }
-
-  .newsletter-button {
-    width: auto;
-    padding: 10px 30px;
-    display: block;
-    margin: 20px auto;
-    font-size: 1.1em;
-    text-align: center;
-  }
-
   .footer-container {
     flex-direction: column;
     gap: 10px;
@@ -187,56 +136,5 @@ footer {
 
   .socialinks img {
     height: 40px;
-  }
-
-  .siteplan-content {
-    padding: 1rem;
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-
-  .siteplan-content h2 {
-    font-size: 1.5rem;
-    margin: 1rem 0 0.5rem;
-    text-align: center;
-  }
-
-  .siteplan-content ul {
-    padding-left: 1.2rem;
-  }
-
-  .siteplan-content li {
-    margin-bottom: 0.5rem;
-  }
-
-  .wireframe-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-  }
-
-  .wireframe-container img {
-    width: 100%;
-    max-width: 400px; 
-    height: auto;
-  }
-
-  /* ✨ Make contact content stack vertically */
-  .contact-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .map iframe {
-    width: 100% !important;
-    height: auto;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .gallery {
-    grid-template-columns: 1fr; /* 1 column on small screens */
-  }
+  } 
 }
