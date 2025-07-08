@@ -1,0 +1,234 @@
+:root { 
+    --primary-color: #951e5a;
+    --secondary-color: white;
+    --accent1-color: yellow;
+    --accent2-color: rgb(36, 207, 36);
+}
+
+/* HEADER / NAV */
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.navigation img { height: 85px; }
+.navigation h1 {
+  flex-grow: 1;
+  text-align: center;
+  margin: 0;
+  font-size: 4rem;
+  font-family: "Shadows Into Light", cursive;
+  color: var(--accent1-color);
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+.nav-links {
+  display: flex;
+  gap: 3rem;
+}
+.nav-links a {
+  color: var(--accent1-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+.navigation a:hover {
+  text-shadow: 0 0 10px var(--accent2-color), 0 0 20px var(--accent1-color) ;
+}
+
+#hamburger {
+  display: none;
+}
+
+/* FOOTER */
+footer {
+  margin-top: auto;
+  padding: 5px 10px;
+  background-color: var(--primary-color);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--accent1-color);
+    padding: 5px 0;
+}
+.socialinks a {
+    text-decoration: none;
+}
+.socialinks img {
+    height: 50px;
+    width: auto;
+}
+.footer-container a {
+    color: var(--accent1-color);
+    text-decoration: none;
+}
+
+/* ===== MOBILE STYLES ===== */
+@media screen and (max-width: 768px) {
+  .navigation {
+    flex-wrap: wrap;
+    padding: 0.5rem 1rem;
+    position: relative;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .navigation img {
+    height: 50px;
+    width: auto;
+  }
+
+  .navigation h1 {
+    flex: 1 1 100%;
+    text-align: center;
+    font-size: 2rem;
+    margin: 0.5rem 0;
+  }
+
+  #hamburger {
+    display: block !important;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #cc317e;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .bio-section,
+  .get-in-touch {
+    width: 90%;
+    max-width: 400px;
+    margin: 1rem auto;
+    box-sizing: border-box;
+  }
+
+  .bio-section article {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .bio-section article img {
+    width: 70%;
+    max-width: 250px;
+    margin: 1rem auto 0;
+    display: block;
+  }
+
+  .get-in-touch {
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  .get-in-touch form {
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  input,
+  textarea {
+    font-size: 1em;
+  }
+
+  .newsletter-button {
+    width: auto;
+    padding: 10px 30px;
+    display: block;
+    margin: 20px auto;
+    font-size: 1.1em;
+    text-align: center;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .socialinks img {
+    height: 40px;
+  }
+
+  .siteplan-content {
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .siteplan-content h2 {
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem;
+    text-align: center;
+  }
+
+  .siteplan-content ul {
+    padding-left: 1.2rem;
+  }
+
+  .siteplan-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .wireframe-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .wireframe-container img {
+    width: 100%;
+    max-width: 400px; 
+    height: auto;
+  }
+
+  /* ✨ Make contact content stack vertically */
+  .contact-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .map iframe {
+    width: 100% !important;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr; /* 1 column on small screens */
+  }
+}

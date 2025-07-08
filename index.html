@@ -7,13 +7,20 @@
     <meta name="description" content="W01 Assignment: Course Home Page">
     <title>Yeiri Martinez | W01 Assignment: Course Home Page</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="styles/week01.css">
 </head>
 <body>
 
     <header>
-        <nav>
-            
+        <nav class="navigation">
+            <img src="" alt="Logo">
+            <h1>Site Name</h1>
+            <button id="hamburger" aria-label="Menu">☰</button>
+            <div class="nav-links">
+            <a href="">Home</a>
+            <a href="">Chamber</a>
+            <a href="">Final</a>
+            </div>
         </nav>
     </header>
 
@@ -22,8 +29,26 @@
     </main>
 
     <footer>
+        <div class="footer-container">
+            <!-- paragraph 1 -->
+            <p>© | <span id="currentyear"></span> | Yeiri's Photography</p>
+            <!-- paragraph 2 -->
+            <p>Last update: <span id="lastModified"></span></p>
 
+            <nav class="socialinks">
+                <a href="https://www.facebook.com/">
+                    <img src="images/facebook.png" alt="Facebook" loading="lazy">
+                </a>
+                <a href="https://www.tiktok.com/@yeirimartinez">
+                    <img src="images/tiktok.png" alt="TikTok" loading="lazy">
+                </a>
+                <a href="https://www.instagram.com/">
+                    <img src="images/instagram.png" alt="Instagram" loading="lazy">
+                </a>
+            </nav>
+        </div>
     </footer>
-    
+    <!-- JAVA S -->
+    <script src="scripts/week01.js"></script>
 </body>
 </html>
