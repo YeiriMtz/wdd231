@@ -1,10 +1,12 @@
 :root { 
-    --primary-color: #951e5a;
+    --primary-color: #1e6395;
     --secondary-color: white;
     --accent1-color: yellow;
-    --accent2-color: rgb(36, 207, 36);
+    --accent2-color: rgb(255, 247, 0);
 }
-
+body {
+    background-color: #7990ae;
+}
 /* HEADER / NAV */
 .navigation {
   display: flex;
@@ -40,6 +42,62 @@
 
 #hamburger {
   display: none;
+}
+
+/* Home page MAIN */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; 
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.about-me,
+.student-photo {
+    flex: 1;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column; 
+}
+
+.about-me {
+    font-size: 20px;
+    margin: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-me article, .student-photo {
+    flex: 1; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: x-large;
+    color: var(--secondary-color);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.student-photo img {
+    width: 50%;
+    height: auto;
+    border-radius: 5px;
+    margin-left: 15px;
+    float: none;
+}
+
+.about-me article p {
+    flex: 1;
+    margin: 0;
+    text-align: left;
+    color: var(--secondary-color);
+}
+
+.student-photo {
+    margin: 15px;
 }
 
 /* FOOTER */
