@@ -1,12 +1,10 @@
 :root { 
-    --primary-color: #1e6395;
+    --primary-color: black;
     --secondary-color: white;
-    --accent1-color: yellow;
-    --accent2-color: rgb(255, 247, 0);
+    --accent1-color: white;
+    --accent2-color: rgb(229, 14, 222);
 }
-body {
-    background-color: #7990ae;
-}
+
 /* HEADER / NAV */
 .navigation {
   display: flex;
@@ -17,27 +15,18 @@ body {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-.navigation img { height: 85px; }
-.navigation h1 {
-  flex-grow: 1;
-  text-align: center;
-  margin: 0;
-  font-size: 4rem;
-  font-family: "Shadows Into Light", cursive;
-  color: var(--accent1-color);
-  text-shadow: 2px 2px 4px rgb(0, 0, 0);
-}
+
 .nav-links {
   display: flex;
   gap: 3rem;
 }
 .nav-links a {
-  color: var(--accent1-color);
+  color: var(--secondary-color);
   text-decoration: none;
   font-size: 1.2rem;
 }
 .navigation a:hover {
-  text-shadow: 0 0 10px var(--accent2-color), 0 0 20px var(--accent1-color) ;
+  text-shadow: 0 0 10px var(--accent2-color), 0 0 20px var(--accent2-color);
 }
 
 #hamburger {
@@ -45,60 +34,21 @@ body {
 }
 
 /* Home page MAIN */
+h2 {
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
 .main-container {
-    display: flex;
-    justify-content: center;
-    align-items: stretch; 
-    gap: 2rem;
-    padding: 1rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
-.about-me,
-.student-photo {
-    flex: 1;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column; 
+.about-me, .student-photo {
+    margin: 1%;
 }
 
-.about-me {
-    font-size: 20px;
-    margin: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.about-me article, .student-photo {
-    flex: 1; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: x-large;
-    color: var(--secondary-color);
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-
-.student-photo img {
-    width: 50%;
-    height: auto;
-    border-radius: 5px;
-    margin-left: 15px;
-    float: none;
-}
-
-.about-me article p {
-    flex: 1;
-    margin: 0;
-    text-align: left;
-    color: var(--secondary-color);
-}
-
-.student-photo {
-    margin: 15px;
-}
 
 /* FOOTER */
 footer {
