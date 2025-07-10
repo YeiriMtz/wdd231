@@ -35,7 +35,7 @@ function displayCourses(courseArray) {
     courseList.appendChild(div);
   });
 
-  // Use reduce to calculate total credits shown
+  // To calculate total credits shown
   const total = courseArray.reduce((sum, course) => {
     return course.completed ? sum + course.credits : sum;
   }, 0);
