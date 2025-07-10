@@ -1,12 +1,16 @@
 :root { 
-    --primary-color: rgb(84, 86, 93);
-    --secondary-color: white;
+    --primary-color: rgb(178, 193, 208);
+    --secondary-color: black;
     --accent1-color: white;
-    --accent2-color: rgb(229, 14, 222);
+    --accent2-color: rgb(131, 231, 8);
+}
+
+body {
+  background-color: rgb(222, 226, 231);
 }
 
 /* HEADER / NAV */
-.navigation {
+header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,104 +18,196 @@
   background-color: var(--primary-color);
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border: solid black;
+}
+
+header img {
+  height: 50px;
+  width: auto;
+}
+
+header h1 {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  margin: 0;
+  flex-grow: 1;
+}
+
+header h1 span {
+  font-weight: bold;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
 .nav-links {
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
 }
+
 .nav-links a {
   color: var(--secondary-color);
   text-decoration: none;
   font-size: 1.2rem;
 }
+
 .navigation a:hover {
-  text-shadow: 0 0 10px var(--accent2-color), 0 0 20px var(--accent2-color);
+  text-shadow: 0 0 10px var(--accent2-color), 0 0 20px yellowgreen;
 }
 
 #hamburger {
   display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  z-index: 1000;
 }
 
-/* Home page MAIN */
+/* MAIN CONTENT */
+main h1 {
+  text-align: center;
+}
+
 h2 {
-    text-align: center;
-    background-color: black;
-    color: white;
-    margin: 0;
+  text-align: center;
+  background-color: black;
+  color: white;
+  margin: 0;
+  width: 100%;
 }
 
 .main-container {
-    display: grid;
-    grid-template-columns: 50% 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1rem;
 }
 
 .about-me, .student-photo {
-    margin: 1%;
-    background-color: lightgray;
+  background-color: lightgray;
+  padding: 1rem;
+  border: solid black;
 }
 
+/* STUDENT PHOTO STYLING */
+.student-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.student-photo img {
+  max-width: 200px;
+  height: auto;
+  border: 3px;
+  border-radius: 5px;
+}
+
+/* COURSES SECTION */
+.courses {
+  margin: 1rem;
+}
+
+.course-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.course-buttons button {
+  background-color: lightgray;
+  border: 1px solid gray;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.course-list {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.course-box {
+  background-color: lightgray;
+  padding: 10px 20px;
+  border: 1px solid gray;
+  text-align: center;
+}
+
+.credits-summary {
+  text-align: center;
+  font-weight: bold;
+}
 
 /* FOOTER */
 footer {
   margin-top: auto;
-  padding: 5px 10px;
+  padding: 10px;
   background-color: var(--primary-color);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: var(--secondary-color);
+  border: solid black;
 }
+
 .footer-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: var(--accent1-color);
-    padding: 5px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
 }
+
 .socialinks a {
-    text-decoration: none;
+  text-decoration: none;
+  margin: 0 10px;
 }
+
 .socialinks img {
-    height: 50px;
-    width: auto;
-}
-.footer-container a {
-    color: var(--accent1-color);
-    text-decoration: none;
+  height: 40px;
+  width: auto;
 }
 
 /* ===== MOBILE STYLES ===== */
 @media screen and (max-width: 768px) {
-  .navigation {
-    flex-wrap: wrap;
-    padding: 0.5rem 1rem;
-    position: relative;
-    border-radius: 0 0 5px 5px;
-  }
-
-  .navigation img {
-    height: 50px;
-    width: auto;
-  }
-
-  .navigation h1 {
-    flex: 1 1 100%;
+  header {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    font-size: 2rem;
-    margin: 0.5rem 0;
+  }
+
+  header img {
+    height: 40px;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  .navigation {
+    flex-direction: column;
+    width: 100%;
   }
 
   #hamburger {
-    display: block !important;
+    display: block;
     position: absolute;
     top: 10px;
     right: 15px;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    z-index: 1000;
   }
 
   .nav-links {
@@ -128,13 +224,16 @@ footer {
     display: flex;
   }
 
-  .footer-container {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
+  .main-container {
+    grid-template-columns: 1fr;
   }
 
-  .socialinks img {
-    height: 40px;
-  } 
+  .course-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .course-buttons {
+    flex-direction: column;
+  }
 }
