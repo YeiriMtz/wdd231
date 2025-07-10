@@ -10,7 +10,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-/* HEADER / NAV */
+/* YEIRI'S HEADER / NAV */
 header {
   display: flex;
   align-items: center;
@@ -72,7 +72,7 @@ header h1 span {
   z-index: 1000;
 }
 
-/* MAIN CONTENT */
+/* YEIRI'S MAIN CONTENT */
 main h1 {
   text-align: center;
 }
@@ -154,7 +154,7 @@ h2 {
   font-weight: bold;
 }
 
-/* FOOTER */
+/* YEIRI'S FOOTER */
 footer {
   margin-top: auto;
   padding: 10px;
@@ -167,8 +167,6 @@ footer {
 }
 
 .footer-container {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 10px;
   text-align: center;
@@ -190,7 +188,7 @@ footer {
   color: black;
 }
 
-/* ===== MOBILE STYLES ===== */
+/* ===== YEIRI'S MOBILE STYLES ===== */
 @media screen and (max-width: 768px) {
   header {
     flex-direction: column;
