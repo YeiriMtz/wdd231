@@ -1,10 +1,6 @@
-// current year
+// Footer date info
 document.getElementById("currentyear").textContent = new Date().getFullYear();
-
-// last modified
-const modified = new Date(document.lastModified);
-const formatted = modified.toLocaleString();
-document.getElementById("lastModified").textContent = formatted;
+document.getElementById("lastModified").textContent = new Date(document.lastModified).toLocaleString();
 
 // Hamburger menu toggle
 const hamburger = document.getElementById("hamburger");
@@ -20,58 +16,47 @@ window.addEventListener("resize", () => {
   }
 });
 
-// STEP 5: Mark completed courses
-courses.forEach(course => {
-  const code = `${course.subject} ${course.number}`;
-  if (["WDD 130", "WDD 131"].includes(code)) {
-    course.completed = true;
-  }
-});
-
-// STEP 6–9: Dynamic course display & filter
+// DOM targets
 const courseList = document.querySelector('.course-list');
 const creditSummary = document.querySelector('.credits-summary');
 
-// Create course card
-function createCourseCard(course) {
-  const div = document.createElement('div');
-  div.classList.add('course-box');
-  if (course.completed) div.classList.add('completed');
-  div.innerHTML = `
-    <strong>${course.subject} ${course.number}</strong>: ${course.title}<br>
-    <em>${course.credits} credits</em>
-  `;
-  return div;
-}
+// Render function
+function displayCourses(courseArray) {
+  courseList.innerHTML = '';
 
-// Display courses function using reduce for credits
-function displayCourses(coursesToShow) {
-  courseList.innerHTML = ''; // Clear previous courses
-
-  coursesToShow.forEach(course => {
-    const card = createCourseCard(course);
-    courseList.appendChild(card);
+  courseArray.forEach(course => {
+    const div = document.createElement('div');
+    div.classList.add('course-box');
+    if (course.completed) div.classList.add('completed');
+    div.innerHTML = `
+      <strong>${course.subject} ${course.number}</strong>: ${course.title}<br>
+      <em>${course.credits} credits</em>
+    `;
+    courseList.appendChild(div);
   });
 
-  const totalCompletedCredits = coursesToShow.reduce((total, course) => {
-    return course.completed ? total + course.credits : total;
+  // Use reduce to calculate total credits shown
+  const total = courseArray.reduce((sum, course) => {
+    return course.completed ? sum + course.credits : sum;
   }, 0);
 
-  creditSummary.textContent = `Credits Completed: ${totalCompletedCredits}`;
+  creditSummary.textContent = `Credits Completed: ${total}`;
 }
 
-// Initial load - show all
+// Initial render
 displayCourses(courses);
 
-// STEP 7: Filter buttons
-document.querySelectorAll('.course-buttons button').forEach(button => {
-  button.addEventListener('click', () => {
-    const type = button.textContent;
-    let filtered = [];
+// Filter buttons with addEventListener
+document.getElementById('allBtn').addEventListener('click', () => {
+  displayCourses(courses);
+});
 
-    if (type === "All") filtered = courses;
-    else filtered = courses.filter(course => course.subject === type);
+document.getElementById('wddBtn').addEventListener('click', () => {
+  const filtered = courses.filter(course => course.subject === 'WDD');
+  displayCourses(filtered);
+});
 
-    displayCourses(filtered);
-  });
+document.getElementById('cseBtn').addEventListener('click', () => {
+  const filtered = courses.filter(course => course.subject === 'CSE');
+  displayCourses(filtered);
 });
