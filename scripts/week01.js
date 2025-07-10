@@ -44,19 +44,18 @@ function createCourseCard(course) {
   return div;
 }
 
-// ✅ ✅ ✅ This is the function you forgot:
+// Display courses function using reduce for credits
 function displayCourses(coursesToShow) {
   courseList.innerHTML = ''; // Clear previous courses
-  let totalCompletedCredits = 0;
 
   coursesToShow.forEach(course => {
     const card = createCourseCard(course);
     courseList.appendChild(card);
-
-    if (course.completed) {
-      totalCompletedCredits += course.credits;
-    }
   });
+
+  const totalCompletedCredits = coursesToShow.reduce((total, course) => {
+    return course.completed ? total + course.credits : total;
+  }, 0);
 
   creditSummary.textContent = `Credits Completed: ${totalCompletedCredits}`;
 }
