@@ -183,6 +183,12 @@ footer {
   width: auto;
 }
 
+.course-box.completed {
+  background-color: var(--accent2-color);
+  border: 2px solid green;
+  color: black;
+}
+
 /* ===== MOBILE STYLES ===== */
 @media screen and (max-width: 768px) {
   header {
@@ -237,4 +243,9 @@ footer {
   .course-buttons {
     flex-direction: column;
   }
+
+  .nav-links {
+  transition: all 0.3s ease;
+}
+
 }
