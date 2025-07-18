@@ -1,0 +1,23 @@
+{
+"family_name": "Martinez",
+"ward_member_since": "2025-02-18",
+"number_of_persons": 3,
+"visited_by_bishopric": true,
+"family_members": [
+    {
+      "name": "Yeiri Martinez",
+      "gender": "Male",
+      "birthdate": "1997-04-12"
+    },
+    {
+      "name": "Lara Martinez",
+      "gender": "Female",
+      "birthdate": "2000-01-30"
+    },
+    {
+      "name": "Oliver Martinez",
+      "gender": "Male",
+      "birthdate": "2022-07-24"
+    }
+  ]
+}
