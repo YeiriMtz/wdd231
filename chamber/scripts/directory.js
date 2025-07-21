@@ -35,21 +35,41 @@ const apiKey = '694f3d563d3489dfbfc9bcb22b0cc292';
 const weatherLocation = document.getElementById('weather-location');
 const weatherDescription = document.getElementById('weather-description');
 const weatherTemp = document.getElementById('weather-temp');
+const weatherHighLow = document.getElementById('weather-high-low');
+const weatherHumidity = document.getElementById('weather-humidity');
+const weatherSunrise = document.getElementById('weather-sunrise');
+const weatherSunset = document.getElementById('weather-sunset');
+const weatherIcon = document.getElementById('weather-icon');
+
+function formatTime(unixTime, timezoneOffset) {
+  const date = new Date((unixTime + timezoneOffset) * 1000);
+  return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+}
 
 function getWeatherByCoords(lat, lon) {
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 
   fetch(url)
     .then(response => {
-      if (!response.ok) {
-        throw new Error('Weather fetch failed');
-      }
+      if (!response.ok) throw new Error('Weather fetch failed');
       return response.json();
     })
     .then(data => {
-      weatherLocation.textContent = `${data.name}, ${data.sys.country}`;
-      weatherDescription.textContent = data.weather[0].description;
-      weatherTemp.textContent = `Temperature: ${data.main.temp} °C`;
+      const { name, sys, main, weather, timezone } = data;
+      const iconCode = weather[0].icon;
+      const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+
+      weatherLocation.textContent = `${name}, ${sys.country}`;
+      weatherDescription.textContent = weather[0].description;
+      weatherTemp.textContent = `${main.temp} °C`;
+      weatherHighLow.textContent = `High: ${main.temp_max} °C / Low: ${main.temp_min} °C`;
+      weatherHumidity.textContent = `Humidity: ${main.humidity}%`;
+      weatherSunrise.textContent = `Sunrise: ${formatTime(sys.sunrise, timezone)}`;
+      weatherSunset.textContent = `Sunset: ${formatTime(sys.sunset, timezone)}`;
+
+      weatherIcon.src = iconUrl;
+      weatherIcon.alt = weather[0].description;
+      weatherIcon.style.display = 'inline';
     })
     .catch(error => {
       console.error(error);
@@ -60,14 +80,14 @@ function getWeatherByCoords(lat, lon) {
 function getUserLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
-      position => {
-        const lat = position.coords.latitude;
-        const lon = position.coords.longitude;
+      pos => {
+        const lat = pos.coords.latitude;
+        const lon = pos.coords.longitude;
         getWeatherByCoords(lat, lon);
       },
-      error => {
-        console.error(error);
-        weatherLocation.textContent = 'No weather info, location access denied';
+      err => {
+        console.error(err);
+        weatherLocation.textContent = 'Location access denied';
       }
     );
   } else {
@@ -76,5 +96,3 @@ function getUserLocation() {
 }
 
 getUserLocation();
-
-
