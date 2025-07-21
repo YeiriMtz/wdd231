@@ -60,7 +60,7 @@ header h1 span {
 }
 
 .nav-links a.active {
-  border-bottom: 3px solid var(--accent2-color);
+  border-bottom: 3px solid var(--accent1-color);
   padding-bottom: 2px;
 }   
 

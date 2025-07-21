@@ -4,25 +4,27 @@ document.getElementById("lastModified").textContent = new Date(document.lastModi
 
 // Hamburger menu toggle
 const hamburger = document.getElementById("hamburger");
-const navLinks = document.querySelector(".nav-links");
+const navLinksContainer = document.querySelector(".nav-links"); // renamed
 
 hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
+  navLinksContainer.classList.toggle("show");
 });
 
 window.addEventListener("resize", () => {
   if (window.innerWidth > 768) {
-    navLinks.classList.remove("show");
+    navLinksContainer.classList.remove("show");
   }
 });
 
 // Highlight current page link
 const currentPage = location.pathname.split("/").pop();
-const navLinks = document.querySelectorAll(".nav-links a");
+const navLinks = document.querySelectorAll(".nav-links a"); // original name OK here
 
 navLinks.forEach(link => {
   const linkPage = link.getAttribute("href");
-  if (linkPage === currentPage) {
+
+  // Special case for index.html or root
+  if ((linkPage === currentPage) || (currentPage === "" && linkPage === "index.html")) {
     link.classList.add("active");
   }
-}); 
+});
