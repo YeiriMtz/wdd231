@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Alpha Corp",
+    "address": "123 Main St, Cityville",
+    "phone": "555-1234",
+    "website": "https://alphacorp.com",
+    "image": "alpha.png",
+    "membershipLevel": 3,
+    "description": "Leading provider of tech solutions."
+  },
+  {
+    "name": "Beta Industries",
+    "address": "456 Side Rd, Townsville",
+    "phone": "555-5678",
+    "website": "https://betaind.com",
+    "image": "beta.png",
+    "membershipLevel": 2,
+    "description": "Specializes in manufacturing and logistics."
+  }
+  // Add 5 more entries...
+]

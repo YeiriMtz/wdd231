@@ -112,6 +112,42 @@ h2 {
     text-align: center;
 }
 
+#members-container {
+  margin-top: 1rem;
+}
+
+.grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.list-view {
+  display: block;
+}
+
+.member-card {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.member-card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.member-card h3 {
+  margin: 0.5rem 0;
+}
+
+.member-card p {
+  margin: 0.25rem 0;
+}
+
 /* YEIRI'S FOOTER */
 footer {
   margin-top: auto;
