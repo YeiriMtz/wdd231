@@ -36,7 +36,7 @@ const listBtn = document.getElementById('list-view-btn');
 async function fetchMembers() {
   try {
     const response = await fetch('data/members.json');
-    if (!response.ok) throw new Error('Failed to load members data');
+    if (!response.ok) throw new Error('Failed to load members data');   
     const members = await response.json();
     renderMembers(members);
   } catch (error) {
