@@ -1,5 +1,6 @@
 :root { 
-    --primary-color: rgba(0, 0, 0, 0.839);
+    --background-color: #85b1d2;
+    --primary-color: #232f38;
     --accent1-color: rgba(255, 255, 255, 0.864);
     --accent2-color: rgb(255, 42, 0);
 }
@@ -8,6 +9,7 @@ body {
   margin: 0 auto; 
   font-family: "Roboto", sans-serif;
   border: solid var(--primary-color);
+  background-color: var(--background-color);
 }
 
 /* DIRECTORY HEADER / NAV */
@@ -86,18 +88,29 @@ header h1 span {
   display: block;
 }
 
-#weather-icon {
-  width: 80px;
-  height: auto;
-  margin: 10px 0;
+main h1 {
+    color: var(--primary-color);
 }
-
 /* SECTIONS */
 .events-weather {
     display: grid;
-    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-columns: 50% 25% 25%;
 }
 
+h2 {
+  text-align: center;
+  background-color: black;
+  color: var(--accent1-color);
+  margin: 0;
+  background-color: var(--primary-color);
+}
+
+.events, .current-weather, .weather-forecast {
+    background-color: lightgray;
+    height: auto;
+    margin: 1rem;
+    text-align: center;
+}
 
 /* YEIRI'S FOOTER */
 footer {
