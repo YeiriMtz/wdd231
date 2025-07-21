@@ -1,0 +1,112 @@
+:root { 
+    --primary-color: rgba(255, 255, 255, 0.753);
+    --secondary-color: black;
+    --accent1-color: rgb(141, 191, 235);
+    --accent2-color: rgb(131, 231, 8);
+}
+
+body {
+  background-color: var(--accent1-color);  
+  font-family: "Roboto", sans-serif;
+}
+
+/* DIRECTORY HEADER / NAV */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border: solid black;
+}
+
+header img {
+  height: 50px;
+  width: auto;
+}
+
+header h1 {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  margin: 0;
+  flex-grow: 1;
+}
+
+header h1 span {
+  font-weight: bold;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.navigation a:hover {
+  text-shadow: 0 0 10px var(--accent2-color), 0 0 20px yellowgreen;
+}
+
+#hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+
+
+
+
+
+/* YEIRI'S FOOTER */
+footer {
+  margin-top: auto;
+  padding: 10px;
+  background-color: var(--primary-color);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: var(--secondary-color);
+  border: solid black;
+}
+
+.footer-container {
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.socialinks a {
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.socialinks img {
+  height: 40px;
+  width: auto;
+}
+
+.course-box.completed {
+  background-color: var(--accent2-color);
+  border: 2px solid green;
+  color: black;
+}
