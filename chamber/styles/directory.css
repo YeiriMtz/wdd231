@@ -7,6 +7,7 @@
 body {
   margin: 0 auto; 
   font-family: "Roboto", sans-serif;
+  border: solid var(--primary-color);
 }
 
 /* DIRECTORY HEADER / NAV */
@@ -18,7 +19,6 @@ header {
   background-color: var(--primary-color);
   flex-wrap: wrap;
   gap: 1rem;
-  border: solid black;
 }
 
 header img {
@@ -77,8 +77,6 @@ header h1 span {
 .hero {
   margin: 0;
   padding: 0;
-  border-left: solid black;
-  border-right: solid black;
 }
 
 .hero img {
@@ -95,7 +93,6 @@ footer {
   background-color: var(--primary-color);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   color: var(--accent1-color);
-  border: solid black;
 }
 
 .footer-container {
