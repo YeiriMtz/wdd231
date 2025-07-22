@@ -91,6 +91,10 @@ main h1 {
     color: var(--accent1-color);
 }
 /* SECTIONS */
+.label {
+  font-weight: bold;
+}
+
 .events-weather {
     display: grid;
     grid-template-columns: 50% 25% 25%;
