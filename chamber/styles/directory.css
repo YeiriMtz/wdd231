@@ -101,6 +101,10 @@ main h1 {
   grid-template-columns: 50% 25% 25%;
 }
 
+#weather-icon {
+  display: none;
+}
+
 h2 {
   text-align: center;
   background-color: var(--primary-color);
