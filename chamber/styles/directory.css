@@ -179,3 +179,72 @@ footer {
   height: 40px;
   width: auto;
 }
+
+/* RESPONSIVE */
+
+/* Box sizing reset for easier layout */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent horizontal scroll and set minimum width */
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+/* Show hamburger and hide nav-links on small screens */
+@media (max-width: 600px) {
+  #hamburger {
+    display: block;
+    color: var(--accent1-color);
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 70px; /* adjust based on your header height */
+    left: 0;
+    z-index: 999;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  header {
+    position: relative;
+  }
+  .navigation {
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+}
+
+/* Change events-weather to block layout on small screens */
+@media (max-width: 768px) {
+  .events-weather {
+    display: block;
+  }
+}
+
+/* Adjust grid-view columns for smaller screens */
+@media (max-width: 900px) {
+  .grid-view {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .grid-view {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Make images fully fluid */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
