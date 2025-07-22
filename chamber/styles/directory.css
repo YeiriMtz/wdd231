@@ -160,6 +160,16 @@ h2 {
   margin: 0.25rem 0;
 }
 
+/* Show images only in grid view */
+#members-container.grid-view .member-card img {
+  display: block; /* or inline-block */
+}
+
+/* Hide images in list view */
+#members-container.list-view .member-card img {
+  display: none;
+}
+
 /* YEIRI'S FOOTER */
 footer {
   margin-top: 10px;
