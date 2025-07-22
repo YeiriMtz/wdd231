@@ -171,7 +171,9 @@ footer {
 
 .footer-container {
   display: grid;
-  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem; /* add some spacing between columns */
+  padding: 1rem;
 }
 
 .socialinks {
@@ -257,4 +259,24 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+/* Medium screens: 2 columns */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small screens: 1 column */
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center; /* optional, center content */
+  }
+
+  /* Optional: spacing below each block */
+  .footer-container > div {
+    margin-bottom: 1.5rem;
+  }
 }
