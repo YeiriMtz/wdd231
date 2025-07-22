@@ -53,7 +53,7 @@ function renderMembers(members) {
     card.className = `member-card member-level-${member.membershipLevel}`;
 
     card.innerHTML = `
-      <img src="images/${member.image}" alt="${member.name} logo" loading="lazy">
+      <img src="images/${member.image}" alt="${member.name} logo" loading="lazy" width="100" height="100">
       <h3>${member.name}</h3>
       <p><strong>Address:</strong> ${member.address}</p>
       <p><strong>Phone:</strong> ${member.phone}</p>
