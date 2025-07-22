@@ -70,7 +70,7 @@ header h1 span {
   font-size: 2rem;
   background: none;
   border: none;
-  color: black;
+  color: var(--accent1-color);
   cursor: pointer;
   z-index: 1000;
 }
@@ -88,31 +88,31 @@ header h1 span {
 }
 
 main h1 {
-    color: var(--accent1-color);
+  color: var(--accent1-color);
 }
+
 /* SECTIONS */
 .label {
   font-weight: bold;
 }   
 
 .events-weather {
-    display: grid;
-    grid-template-columns: 50% 25% 25%;
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
 }
 
 h2 {
   text-align: center;
-  background-color: black;
+  background-color: var(--primary-color);
   color: var(--accent1-color);
   margin: 0;
-  background-color: var(--primary-color);
 }
 
 .events, .current-weather, .weather-forecast {
-    background-color: var(--accent1-color);
-    height: auto;
-    margin: 1rem;
-    text-align: center;
+  background-color: var(--accent1-color);
+  height: auto;
+  margin: 1rem;
+  text-align: center;
 }
 
 #members-container {
@@ -120,9 +120,10 @@ h2 {
 }
 
 .view-toggle {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
+
 .grid-view {
   display: grid;
   grid-template-columns: repeat(4, 2fr);
@@ -181,21 +182,17 @@ footer {
 }
 
 /* RESPONSIVE */
-
-/* Box sizing reset for easier layout */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* Prevent horizontal scroll and set minimum width */
 body {
   min-width: 320px;
   overflow-x: hidden;
 }
 
-/* Show hamburger and hide nav-links on small screens */
 @media (max-width: 600px) {
   #hamburger {
     display: block;
@@ -207,7 +204,7 @@ body {
     width: 100%;
     background-color: var(--primary-color);
     position: absolute;
-    top: 70px; /* adjust based on your header height */
+    top: 70px; 
     left: 0;
     z-index: 999;
   }
@@ -223,26 +220,30 @@ body {
   }
 }
 
-/* Change events-weather to block layout on small screens */
 @media (max-width: 768px) {
   .events-weather {
     display: block;
   }
 }
 
-/* Adjust grid-view columns for smaller screens */
 @media (max-width: 900px) {
   .grid-view {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (max-width: 480px) {
+
+@media (max-width: 600px) {
   .grid-view {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    justify-items: center;
+    padding: 1rem;
+  }
+
+  .member-card {
+    max-width: 90%;
   }
 }
 
-/* Make images fully fluid */
 img {
   max-width: 100%;
   height: auto;
