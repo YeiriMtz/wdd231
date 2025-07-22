@@ -30,8 +30,6 @@ function getWeatherByCity(city, country) {
     })
     .then(data => {
       const { name, sys, main, weather, timezone, coord } = data;
-      const iconCode = weather[0].icon;
-      const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
       weatherLocation.textContent = `${name}, ${sys.country}`;
       const description = weather[0].description;
@@ -42,11 +40,11 @@ function getWeatherByCity(city, country) {
       weatherSunrise.innerHTML = `<strong>Sunrise:</strong> ${formatTime(sys.sunrise, timezone)}`;
       weatherSunset.innerHTML = `<strong>Sunset:</strong> ${formatTime(sys.sunset, timezone)}`;
 
-      weatherIcon.src = iconUrl;
-      weatherIcon.alt = weather[0].description;
+      // Static icon path
+      weatherIcon.src = 'images/weather-icon.webp';
+      weatherIcon.alt = 'Weather icon';
       weatherIcon.style.display = 'inline';
 
-      // Also fetch forecast using coordinates from this response
       getForecastByCoords(coord.lat, coord.lon);
     })
     .catch(error => {
@@ -101,5 +99,5 @@ function getForecastByCoords(lat, lon) {
     });
 }
 
-// 🌟 Call fixed location instead of user geolocation
+// Start weather fetch
 getWeatherByCity('Chihuahua', 'MX');
