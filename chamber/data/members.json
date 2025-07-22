@@ -1,21 +1,65 @@
 [
   {
-    "name": "Alpha Corp",
-    "address": "123 Main St, Cityville",
-    "phone": "555-1234",
-    "website": "https://alphacorp.com",
-    "image": "alpha.png",
+    "name": "Grupo La Norteñita",
+    "address": "Chihuahua–Cuauhtémoc Hwy km 98.5, Chihuahua, CHIH",
+    "phone": "(625) 590-2500",
+    "website": "https://www.grupolanortenita.com/",
+    "image": "nortenita.jpeg",
     "membershipLevel": 3,
-    "description": "Leading provider of tech solutions."
+    "description": "Major apple producer and agribusiness in Cuauhtémoc / Chihuahua."
   },
   {
-    "name": "Beta Industries",
-    "address": "456 Side Rd, Townsville",
-    "phone": "555-5678",
-    "website": "https://betaind.com",
-    "image": "beta.png",
+    "name": "Copachisa Constructora",
+    "address": "Valle Escondido #5700, Fracc. Desarrollo el Saucito, CP 31115 Chihuahua, México",
+    "phone": "(614) 439-3900",
+    "website": "https://www.copachisa.com/",
+    "image": "copachisa.png",
+    "membershipLevel": 3,
+    "description": "Industrial construction firm active since 1958."
+  },
+  {
+    "name": "Pavos Parson",
+    "address": "C. Emilio Carranza #1000, Col. Obrer,a Nuevo Casas Grandes, Chihuahua",
+    "phone": "(636) 694-1888",
+    "website": "http://www.pavosparson.com/",
+    "image": "parson.png",
     "membershipLevel": 2,
-    "description": "Specializes in manufacturing and logistics."
+    "description": "A proudly Mexican company, dedicated to the breeding, production, and distribution of 100% Mexican juicy turkey, founded in 1975 by Don Ricardo Parson M."
+  },
+  {
+    "name": "ZF Passive Safety Systems México",
+    "address": "Av. Juan Escutia #3201, Parque Industrial El Saucito, 31125 Chihuahua Chihuahua, México",
+    "phone": "(614) 158-5620",
+    "website": "https://www.zf.com/mexico/es/home/home.html",
+    "image": "zf.jpeg",
+    "membershipLevel": 3,
+    "description": "Produces automotive passive safety components."
+  },
+  {
+    "name": "Pizzeria La Sierra",
+    "address": "Emilio Carranza #1200 L13 20 de noviembre, 31700 Casas Grandes, Chih.",
+    "phone": "(636) 692-7264",
+    "website": "https://www.pizzerialasierra.com/",
+    "image": "la-sierra.png",
+    "membershipLevel": 2,
+    "description": "Since its founding in 1997, our dream has been to be known as the best Mennonite-owned pizzeria in Mexico, the United States, and Canada."
+  },
+  {
+    "name": "Canaco SERVYTUR", 
+    "address": "Av. Pedro Zuloaga #11200, Labor de Terrazas, 31207 Chihuahua, Chih.",
+    "phone": " (614) 439-1250",
+    "website": "https://canacochihuahua.com/",
+    "image": "canaco.png",
+    "membershipLevel": 2,
+    "description": "The National Chamber of Commerce, Services and Tourism of Chihuahua has had uninterrupted activity despite the turbulent years of the 1910 Revolution."
+  },
+  {
+    "name": "¡ah Chihuahua!",
+    "address": "Chihuahua, Mexico",
+    "phone": "(800) 710-0101",
+    "website": "https://www.visitachihuahua.mx/",
+    "image": "chih.jpg",
+    "membershipLevel": 3,
+    "description": "Explore the grandeur of our state, where history intertwines with natural beauty. From majestic mountains to vibrant cities. Immerse yourself in the culture, cuisine, and hospitality that define us!"
   }
-  // Add 5 more entries...
 ]

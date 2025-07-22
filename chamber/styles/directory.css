@@ -8,7 +8,6 @@
 body {
   margin: 0 auto; 
   font-family: "Roboto", sans-serif;
-  border: solid var(--primary-color);
   background-color: var(--background-color);
 }
 
@@ -118,8 +117,9 @@ h2 {
 
 .grid-view {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, 2fr);
   gap: 1rem;
+  margin: ;
 }
 
 .list-view {
@@ -134,7 +134,7 @@ h2 {
 }
 
 .member-card img {
-  max-width: 100%;
+  max-width: 100px;
   height: auto;
   display: block;
   margin-bottom: 0.5rem;
@@ -150,7 +150,7 @@ h2 {
 
 /* YEIRI'S FOOTER */
 footer {
-  margin-top: auto;
+  margin-top: 10px;
   padding: 10px;
   background-color: var(--primary-color);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
