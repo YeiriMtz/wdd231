@@ -1,4 +1,3 @@
-// WEATHER INFO ----------------------------------------------------------------------------------
 const apiKey = '694f3d563d3489dfbfc9bcb22b0cc292';
 
 // Elements for current weather
@@ -11,7 +10,7 @@ const weatherSunrise = document.getElementById('weather-sunrise');
 const weatherSunset = document.getElementById('weather-sunset');
 const weatherIcon = document.getElementById('weather-icon');
 
-// Elements for forecast (using <p>)
+// Elements for forecast
 const forecastToday = document.getElementById('forecast-today');
 const forecastWed = document.getElementById('forecast-wed');
 const forecastThu = document.getElementById('forecast-thu');
@@ -21,8 +20,8 @@ function formatTime(unixTime, timezoneOffset) {
   return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 }
 
-function getWeatherByCoords(lat, lon) {
-  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+function getWeatherByCity(city, country) {
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${apiKey}&units=metric`;
 
   fetch(url)
     .then(response => {
@@ -30,7 +29,7 @@ function getWeatherByCoords(lat, lon) {
       return response.json();
     })
     .then(data => {
-      const { name, sys, main, weather, timezone } = data;
+      const { name, sys, main, weather, timezone, coord } = data;
       const iconCode = weather[0].icon;
       const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
@@ -46,13 +45,16 @@ function getWeatherByCoords(lat, lon) {
       weatherIcon.src = iconUrl;
       weatherIcon.alt = weather[0].description;
       weatherIcon.style.display = 'inline';
+
+      // Also fetch forecast using coordinates from this response
+      getForecastByCoords(coord.lat, coord.lon);
     })
     .catch(error => {
       console.error(error);
       weatherLocation.textContent = 'Unable to get weather data';
     });
 }
-// Forecast --------------------------------------------------------------------
+
 function getForecastByCoords(lat, lon) {
   const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 
@@ -99,23 +101,5 @@ function getForecastByCoords(lat, lon) {
     });
 }
 
-function getUserLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(
-      pos => {
-        const lat = pos.coords.latitude;
-        const lon = pos.coords.longitude;
-        getWeatherByCoords(lat, lon);
-        getForecastByCoords(lat, lon);
-      },
-      err => {
-        console.error(err);
-        weatherLocation.textContent = 'Location access denied';
-      }
-    );
-  } else {
-    weatherLocation.textContent = 'Geolocation not supported';
-  }
-}
-
-getUserLocation();
+// 🌟 Call fixed location instead of user geolocation
+getWeatherByCity('Chihuahua', 'MX');
