@@ -170,9 +170,14 @@ footer {
 }
 
 .footer-container {
-  align-items: center;
-  gap: 10px;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+}
+
+.socialinks {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    margin: 10%;
 }
 
 .socialinks a {
@@ -181,7 +186,7 @@ footer {
 }
 
 .socialinks img {
-  height: 40px;
+  height: 80px;
   width: auto;
 }
 
