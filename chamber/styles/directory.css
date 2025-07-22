@@ -88,7 +88,7 @@ header h1 span {
 }
 
 main h1 {
-    color: var(--primary-color);
+    color: var(--accent1-color);
 }
 /* SECTIONS */
 .events-weather {
