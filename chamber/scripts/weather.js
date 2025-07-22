@@ -1,63 +1,121 @@
 // WEATHER INFO ----------------------------------------------------------------------------------
-const currentWeatherEl = document.querySelector('.current-weather');
-const forecastEl = document.querySelector('.weather-forecast');
+const apiKey = '694f3d563d3489dfbfc9bcb22b0cc292';
 
+// Elements for current weather
+const weatherLocation = document.getElementById('weather-location');
+const weatherDescription = document.getElementById('weather-description');
+const weatherTemp = document.getElementById('weather-temp');
+const weatherHighLow = document.getElementById('weather-high-low');
+const weatherHumidity = document.getElementById('weather-humidity');
+const weatherSunrise = document.getElementById('weather-sunrise');
+const weatherSunset = document.getElementById('weather-sunset');
 const weatherIcon = document.getElementById('weather-icon');
-const locationEl = document.getElementById('weather-location');
-const descriptionEl = document.getElementById('weather-description');
-const tempEl = document.getElementById('weather-temp');
-const highLowEl = document.getElementById('weather-high-low');
-const humidityEl = document.getElementById('weather-humidity');
-const sunriseEl = document.getElementById('weather-sunrise');
-const sunsetEl = document.getElementById('weather-sunset');
 
+// Elements for forecast (using <p>)
 const forecastToday = document.getElementById('forecast-today');
 const forecastWed = document.getElementById('forecast-wed');
 const forecastThu = document.getElementById('forecast-thu');
 
-const API_KEY = '694f3d563d3489dfbfc9bcb22b0cc292';
-const lat = 28.6353;
-const lon = -106.0889;
-const units = 'metric';
+function formatTime(unixTime, timezoneOffset) {
+  const date = new Date((unixTime + timezoneOffset) * 1000);
+  return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+}
 
-async function getWeather() {
-  try {
-    const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=${units}&exclude=minutely,hourly,alerts`
+function getWeatherByCoords(lat, lon) {
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+
+  fetch(url)
+    .then(response => {
+      if (!response.ok) throw new Error('Weather fetch failed');
+      return response.json();
+    })
+    .then(data => {
+      const { name, sys, main, weather, timezone } = data;
+      const iconCode = weather[0].icon;
+      const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+
+      weatherLocation.textContent = `${name}, ${sys.country}`;
+      const description = weather[0].description;
+      weatherDescription.textContent = description.charAt(0).toUpperCase() + description.slice(1);
+      weatherTemp.textContent = `${main.temp} °C`;
+      weatherHighLow.innerHTML = `<strong>High:</strong> ${main.temp_max} °C / <strong>Low:</strong> ${main.temp_min} °C`;
+      weatherHumidity.innerHTML = `<strong>Humidity:</strong> ${main.humidity}%`;
+      weatherSunrise.innerHTML = `<strong>Sunrise:</strong> ${formatTime(sys.sunrise, timezone)}`;
+      weatherSunset.innerHTML = `<strong>Sunset:</strong> ${formatTime(sys.sunset, timezone)}`;
+
+      weatherIcon.src = iconUrl;
+      weatherIcon.alt = weather[0].description;
+      weatherIcon.style.display = 'inline';
+    })
+    .catch(error => {
+      console.error(error);
+      weatherLocation.textContent = 'Unable to get weather data';
+    });
+}
+// Forecast --------------------------------------------------------------------
+function getForecastByCoords(lat, lon) {
+  const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+
+  fetch(forecastUrl)
+    .then(response => {
+      if (!response.ok) throw new Error('Forecast fetch failed');
+      return response.json();
+    })
+    .then(data => {
+      const forecastList = data.list;
+
+      const today = new Date();
+      const nextWednesday = new Date(today);
+      const nextThursday = new Date(today);
+
+      nextWednesday.setDate(today.getDate() + ((3 + 7 - today.getDay()) % 7 || 7));
+      nextThursday.setDate(today.getDate() + ((4 + 7 - today.getDay()) % 7 || 7));
+
+      const todayStr = today.toISOString().split('T')[0];
+      const wedStr = nextWednesday.toISOString().split('T')[0];
+      const thuStr = nextThursday.toISOString().split('T')[0];
+
+      const getMiddayForecast = (dateStr) => {
+        return forecastList.find(f => f.dt_txt.startsWith(dateStr) && f.dt_txt.includes("12:00:00"));
+      };
+
+      const renderTempOnly = (element, forecast, label) => {
+        if (!forecast) {
+          element.textContent = `${label}: No data`;
+          return;
+        }
+        element.innerHTML = `<strong>${label}:</strong> ${forecast.main.temp} °C`;
+      };
+
+      renderTempOnly(forecastToday, getMiddayForecast(todayStr), 'Today');
+      renderTempOnly(forecastWed, getMiddayForecast(wedStr), 'Next Wednesday');
+      renderTempOnly(forecastThu, getMiddayForecast(thuStr), 'Next Thursday');
+    })
+    .catch(error => {
+      console.error(error);
+      forecastToday.textContent = 'Forecast unavailable';
+      forecastWed.textContent = '';
+      forecastThu.textContent = '';
+    });
+}
+
+function getUserLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      pos => {
+        const lat = pos.coords.latitude;
+        const lon = pos.coords.longitude;
+        getWeatherByCoords(lat, lon);
+        getForecastByCoords(lat, lon);
+      },
+      err => {
+        console.error(err);
+        weatherLocation.textContent = 'Location access denied';
+      }
     );
-    const data = await response.json();
-
-    // CURRENT WEATHER
-    const current = data.current;
-    locationEl.textContent = "Chihuahua, Mexico";
-    descriptionEl.textContent = `Conditions: ${current.weather[0].description}`;
-    tempEl.textContent = `Temp: ${current.temp.toFixed(1)} °C`;
-    highLowEl.textContent = `High: ${data.daily[0].temp.max.toFixed(1)} °C / Low: ${data.daily[0].temp.min.toFixed(1)} °C`;
-    humidityEl.innerHTML = `<span class="label">Humidity:</span> ${current.humidity}%`;
-
-    // Icon
-    const iconCode = current.weather[0].icon;
-    const iconURL = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
-    weatherIcon.src = iconURL;
-    weatherIcon.alt = current.weather[0].description;
-    weatherIcon.style.display = "inline";
-
-    // Sunrise/Sunset
-    const sunriseTime = new Date(current.sunrise * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-    const sunsetTime = new Date(current.sunset * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-    sunriseEl.innerHTML = `<span class="label">Sunrise:</span> ${sunriseTime}`;
-    sunsetEl.innerHTML = `<span class="label">Sunset:</span> ${sunsetTime}`;
-
-    const days = data.daily;
-
-    forecastToday.innerHTML = `<span class="label">Today:</span> ${days[0].temp.max.toFixed(1)}°C`;
-    forecastWed.innerHTML = `<span class="label">Wednesday:</span> ${days[2].temp.max.toFixed(1)}°C`;
-    forecastThu.innerHTML = `<span class="label">Thursday:</span> ${days[3].temp.max.toFixed(1)}°C`;
-
-  } catch (error) {
-    console.error("Error fetching weather:", error);
-    locationEl.textContent = "Failed to load weather.";
+  } else {
+    weatherLocation.textContent = 'Geolocation not supported';
   }
 }
 
-getWeather();
+getUserLocation();
