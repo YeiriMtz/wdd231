@@ -1,6 +1,6 @@
 :root { 
-    --background-color: #85b1d2;
-    --primary-color: #232f38;
+    --background-color: #3e794a;
+    --primary-color: #243823ba;
     --accent1-color: rgba(255, 255, 255, 0.864);
     --accent2-color: rgb(255, 42, 0);
 }
@@ -105,7 +105,7 @@ h2 {
 }
 
 .events, .current-weather, .weather-forecast {
-    background-color: lightgray;
+    background-color: var(--accent1-color);
     height: auto;
     margin: 1rem;
     text-align: center;
@@ -115,6 +115,10 @@ h2 {
   margin-top: 1rem;
 }
 
+.view-toggle {
+    display: flex;
+    justify-content: center;
+}
 .grid-view {
   display: grid;
   grid-template-columns: repeat(4, 2fr);
@@ -127,7 +131,7 @@ h2 {
 }
 
 .member-card {
-  background: white;
+  background: var(--accent1-color);
   border: 1px solid #ccc;
   padding: 1rem;
   border-radius: 5px;
