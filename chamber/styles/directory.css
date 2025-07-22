@@ -103,7 +103,9 @@ main h1 {
 
 #weather-icon {
   display: none;
+  filter: invert(1) sepia(1) hue-rotate(180deg) saturate(3);
 }
+
 
 h2 {
   text-align: center;
