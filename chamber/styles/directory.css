@@ -1,2 +1,292 @@
-/* minify version of my own css */
-:root {--background-color: #3e794a;--primary-color: #243823ba;--accent1-color: rgba(255, 255, 255, 0.864);--accent2-color: rgb(255, 42, 0);}body {margin: 0 auto;font-family: "Roboto", sans-serif;background-color: var(--background-color);}header {display: flex;align-items: center;justify-content: space-between;padding: 1rem;background-color: var(--primary-color);flex-wrap: wrap;gap: 1rem;}header img {height: 50px;width: auto;}header h1 {color: var(--accent1-color);font-size: 1.5rem;margin: 0;flex-grow: 1;}header h1 span {font-weight: bold;}.navigation {display: flex;align-items: center;justify-content: space-between;gap: 2rem;}.nav-links {display: flex;gap: 2rem;}.nav-links a {color: var(--accent1-color);text-decoration: none;font-size: 1.2rem;}.navigation a:hover {text-shadow: 0 0 10px var(--accent2-color), 0 0 20px var(--accent2-color);}.nav-links a.active {border-bottom: 3px solid var(--accent1-color);padding-bottom: 2px;}#hamburger {display: none;font-size: 2rem;background: none;border: none;color: var(--accent1-color);cursor: pointer;z-index: 1000;}.hero {margin: 0;padding: 0;}.hero img {width: 100%;height: auto;display: block;}main h1 {color: var(--accent1-color);}.label {font-weight: bold;}.events-weather {display: grid;grid-template-columns: 50% 25% 25%;}#weather-icon {display: none;}h2 {text-align: center;background-color: var(--primary-color);color: var(--accent1-color);margin: 0;}.events, .current-weather, .weather-forecast {background-color: var(--accent1-color);height: auto;margin: 1rem;text-align: center;}#members-container {margin-top: 1rem;}.view-toggle {display: flex;justify-content: center;}.grid-view {display: grid;grid-template-columns: repeat(4, 2fr);gap: 1rem;}.list-view {display: block;}.member-card {background: var(--accent1-color);border: 1px solid #ccc;padding: 1rem;border-radius: 5px;}.member-card img {max-width: 100px;height: auto;display: block;margin-bottom: 0.5rem;}.member-card h3 {margin: 0.5rem 0;}.member-card p {margin: 0.25rem 0;}#members-container.grid-view .member-card img {display: block;}#members-container.list-view .member-card img {display: none;}footer {margin-top: 10px;padding: 10px;background-color: var(--primary-color);box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);color: var(--accent1-color);}.footer-container {display: grid;grid-template-columns: repeat(3, 1fr);gap: 1rem;padding: 1rem;}.socialinks {display: grid;grid-template-columns: 33.3% 33.3% 33.3%;margin: 10%;}.socialinks a {text-decoration: none;margin: 0 10px;}.socialinks img {height: 80px;width: auto;}*, *::before, *::after {box-sizing: border-box;}body {min-width: 320px;overflow-x: hidden;}@media (max-width: 600px) {#hamburger {display: block;color: var(--accent1-color);}.nav-links {display: none;flex-direction: column;width: 100%;background-color: var(--primary-color);position: absolute;top: 70px;left: 0;z-index: 999;}.nav-links.show {display: flex;}header {position: relative;}.navigation {flex-grow: 1;justify-content: flex-end;}}@media (max-width: 768px) {.events-weather {display: block;}}@media (max-width: 900px) {.grid-view {grid-template-columns: repeat(2, 1fr);}}@media (max-width: 600px) {.grid-view {grid-template-columns: 1fr !important;justify-items: center;padding: 1rem;}.member-card {max-width: 90%;}}img {max-width: 100%;height: auto;display: block;}@media (max-width: 900px) {.footer-container {grid-template-columns: repeat(2, 1fr);}}@media (max-width: 600px) {.footer-container {grid-template-columns: 1fr;text-align: center;}.footer-container > div {margin-bottom: 1.5rem;}}
+:root { 
+    --background-color: #3e794a;
+    --primary-color: #243823ba;
+    --accent1-color: rgba(255, 255, 255, 0.864);
+    --accent2-color: rgb(255, 42, 0);
+}
+
+body {
+  margin: 0 auto; 
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background-color);
+}
+
+/* DIRECTORY HEADER / NAV */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+header img {
+  height: 50px;
+  width: auto;
+}
+
+header h1 {
+  color: var(--accent1-color);
+  font-size: 1.5rem;
+  margin: 0;
+  flex-grow: 1;
+}
+
+header h1 span {
+  font-weight: bold;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--accent1-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.navigation a:hover {
+  text-shadow: 0 0 10px var(--accent2-color), 0 0 20px var(--accent2-color);
+}
+
+.nav-links a.active {
+  border-bottom: 3px solid var(--accent1-color);
+  padding-bottom: 2px;
+}   
+
+#hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--accent1-color);
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* BODY */
+.hero {
+  margin: 0;
+  padding: 0;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+main h1 {
+  color: var(--accent1-color);
+}
+
+/* SECTIONS */
+.label {
+  font-weight: bold;
+}   
+
+.events-weather {
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+}
+
+#weather-icon {
+  display: none;
+}
+
+h2 {
+  text-align: center;
+  background-color: var(--primary-color);
+  color: var(--accent1-color);
+  margin: 0;
+}
+
+.events, .current-weather, .weather-forecast {
+  background-color: var(--accent1-color);
+  height: auto;
+  margin: 1rem;
+  text-align: center;
+}
+
+#members-container {
+  margin-top: 1rem;
+}
+
+.view-toggle {
+  display: flex;
+  justify-content: center;
+}
+
+.grid-view {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  gap: 1rem;
+}
+
+.list-view {
+  display: block;
+}
+
+.member-card {
+  background: var(--accent1-color);
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.member-card img {
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.member-card h3 {
+  margin: 0.5rem 0;
+}
+
+.member-card p {
+  margin: 0.25rem 0;
+}
+
+/* Show images only in grid view */
+#members-container.grid-view .member-card img {
+  display: block; /* or inline-block */
+}
+
+/* Hide images in list view */
+#members-container.list-view .member-card img {
+  display: none;
+}
+
+/* YEIRI'S FOOTER */
+footer {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: var(--primary-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: var(--accent1-color);
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem; /* add some spacing between columns */
+  padding: 1rem;
+}
+
+.socialinks {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    margin: 10%;
+}
+
+.socialinks a {
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.socialinks img {
+  height: 80px;
+  width: auto;
+}
+
+/* RESPONSIVE */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+@media (max-width: 600px) {
+  #hamburger {
+    display: block;
+    color: var(--accent1-color);
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 70px; 
+    left: 0;
+    z-index: 999;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  header {
+    position: relative;
+  }
+  .navigation {
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 768px) {
+  .events-weather {
+    display: block;
+  }
+}
+
+@media (max-width: 900px) {
+  .grid-view {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-view {
+    grid-template-columns: 1fr !important;
+    justify-items: center;
+    padding: 1rem;
+  }
+
+  .member-card {
+    max-width: 90%;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Medium screens: 2 columns */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small screens: 1 column */
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center; /* optional, center content */
+  }
+
+  /* Optional: spacing below each block */
+  .footer-container > div {
+    margin-bottom: 1.5rem;
+  }
+}
