@@ -14,12 +14,42 @@ body {
 /* DIRECTORY HEADER / NAV */
 header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 1rem;
   background-color: var(--primary-color);
   flex-wrap: wrap;
-  gap: 1rem;
+}
+
+/* Visually hidden but accessible for screen readers */
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Style for visible header title in header */
+.header-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent1-color);
+  margin: 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brand img {
+  height: 60px;
 }
 
 header img {
@@ -45,6 +75,13 @@ header h1 span {
   gap: 2rem;
 }
 
+.nav-links a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: var(--accent1-color);
+  font-weight: 500;
+}
+
 .nav-links {
   display: flex;
   gap: 2rem;
@@ -64,6 +101,11 @@ header h1 span {
   border-bottom: 3px solid var(--accent1-color);
   padding-bottom: 2px;
 }   
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
 
 #hamburger {
   display: none;
