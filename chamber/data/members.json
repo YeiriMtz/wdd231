@@ -14,7 +14,7 @@
     "phone": "(614) 439-3900",
     "website": "https://www.copachisa.com/",
     "image": "copachisa.webp",
-    "membershipLevel": 3,
+    "membershipLevel": 1,
     "description": "Industrial construction firm active since 1958."
   },
   {
@@ -23,7 +23,7 @@
     "phone": "(636) 694-1888",
     "website": "http://www.pavosparson.com/",
     "image": "parson.webp",
-    "membershipLevel": 2,
+    "membershipLevel": 3,
     "description": "A proudly Mexican company, dedicated to the breeding, production, and distribution of 100% Mexican juicy turkey, founded in 1975 by Don Ricardo Parson M."
   },
   {
@@ -32,7 +32,7 @@
     "phone": "(614) 158-5620",
     "website": "https://www.zf.com/mexico/es/home/home.html",
     "image": "zf.webp",
-    "membershipLevel": 3,
+    "membershipLevel": 2,
     "description": "Produces automotive passive safety components."
   },
   {
@@ -41,7 +41,7 @@
     "phone": "(636) 692-7264",
     "website": "https://www.pizzerialasierra.com/",
     "image": "la-sierra.webp",
-    "membershipLevel": 2,
+    "membershipLevel": 3,
     "description": "Since its founding in 1997, our dream has been to be known as the best Mennonite-owned pizzeria in Mexico, the United States, and Canada."
   },
   {
@@ -50,7 +50,7 @@
     "phone": " (614) 439-1250",
     "website": "https://canacochihuahua.com/",
     "image": "canaco.webp",
-    "membershipLevel": 2,
+    "membershipLevel": 1,
     "description": "The National Chamber of Commerce, Services and Tourism of Chihuahua has had uninterrupted activity despite the turbulent years of the 1910 Revolution."
   },
   {
@@ -59,7 +59,7 @@
     "phone": "(800) 710-0101",
     "website": "https://www.visitachihuahua.mx/",
     "image": "chih.webp",
-    "membershipLevel": 3,
+    "membershipLevel": 1,
     "description": "Explore the grandeur of our state, where history intertwines with natural beauty. From majestic mountains to vibrant cities. Immerse yourself in the culture, cuisine, and hospitality that define us!"
   }
 ]

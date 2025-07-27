@@ -84,3 +84,44 @@ listBtn.addEventListener("click", () => {
 
 fetchMembers();
 setGridView();
+
+async function fetchSpotlights() {
+  try {
+    const response = await fetch("data/members.json");
+    if (!response.ok) throw new Error("Failed to fetch spotlight members.");
+    const members = await response.json();
+
+    // Filter for Gold (3) and Silver (2)
+    const eligible = members.filter(member =>
+      member.membershipLevel === 2 || member.membershipLevel === 3
+    );
+
+    // Shuffle and select 3
+    const shuffled = eligible.sort(() => 0.5 - Math.random()).slice(0, 3);
+
+    const container = document.getElementById("spotlight-container");
+    container.innerHTML = "";
+
+    shuffled.forEach(member => {
+      const card = document.createElement("div");
+      card.classList.add("spotlight-card");
+
+      card.innerHTML = `
+        <img src="images/${member.image}" alt="${member.name} logo" loading="lazy" width="100" height="100">
+        <h3>${member.name}</h3>
+        <p><strong>Membership:</strong> ${member.membershipLevel === 3 ? "Gold" : "Silver"}</p>
+        <p><strong>Phone:</strong> ${member.phone}</p>
+        <p><strong>Address:</strong> ${member.address}</p>
+        <p><strong>Website:</strong> <a href="${member.website}" target="_blank" rel="noopener">${member.website}</a></p>
+        <p>${member.description}</p>
+      `;
+
+      container.appendChild(card);
+    });
+  } catch (error) {
+    console.error("Spotlight Error:", error);
+    document.getElementById("spotlight-container").textContent = "Unable to load spotlights.";
+  }
+}
+
+fetchSpotlights();
