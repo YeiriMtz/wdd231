@@ -85,6 +85,8 @@ listBtn.addEventListener("click", () => {
 fetchMembers();
 setGridView();
 
+// SPOTLLIGHTS
+
 async function fetchSpotlights() {
   try {
     const response = await fetch("data/members.json");
