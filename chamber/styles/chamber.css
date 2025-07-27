@@ -230,6 +230,21 @@ h2 {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+.spotlight-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.spotlight-card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
 /* YEIRI'S FOOTER */
 footer {
   margin-top: 10px;
