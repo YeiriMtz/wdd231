@@ -2,7 +2,7 @@
     --background-color: #3e794a;
     --primary-color: #243823ba;
     --accent1-color: rgba(255, 255, 255, 0.864);
-    --accent2-color: rgba(255, 0, 0, 0.866);
+    --accent2-color: rgb(255, 0, 0);
 }
 
 body {
@@ -237,7 +237,7 @@ h2 {
 }
 
 .cta-button:hover {
-  background-color: rgba(144, 238, 144, 0.837);
+  background-color: lightgreen;
   color: black;
 }
 
@@ -287,99 +287,6 @@ h2 {
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
-}
-
-/* JOIN US PAGE */
-form label {
-  display: block;
-  margin: 1rem 0;
-}
-
-input, textarea, select {
-  width: 100%;
-  padding: 0.5rem;
-  margin-top: 0.25rem;
-}
-
-.membership-cards {
-  display: grid;
-  gap: 1rem;
-  margin-top: 2rem;
-  animation: fadeInUp 1.5s ease;
-}
-
-@media (min-width: 768px) {
-  main {
-    display: flex;
-    gap: 2rem;
-  }
-  form {
-    flex: 2;
-  }
-  .membership-cards {
-    flex: 1;
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-}
-
-.card {
-  background: #f8f8f8;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.02);
-}
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 10;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-}
-
-.modal-content {
-  background: white;
-  margin: 10% auto;
-  padding: 2rem;
-  width: 80%;
-  max-width: 500px;
-  border-radius: 8px;
-  position: relative;
-}
-
-.close {
-  position: absolute;
-  top: 0.5rem;
-  right: 1rem;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-/* THANK YOU PAGE */
-.thankyou-container {
-  max-width: 700px;
-  margin: 2rem auto;
-  padding: 1rem;
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.thankyou-info p {
-  padding: 0.5rem 0;
-  font-size: 1.1rem;
 }
 
 /* YEIRI'S FOOTER */
