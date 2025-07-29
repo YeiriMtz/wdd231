@@ -2,7 +2,7 @@
     --background-color: #3e794a;
     --primary-color: #243823ba;
     --accent1-color: rgba(255, 255, 255, 0.864);
-    --accent2-color: rgb(255, 42, 0);
+    --accent2-color: rgba(255, 0, 0, 0.866);
 }
 
 body {
@@ -133,7 +133,7 @@ main h1 {
   color: var(--accent1-color);
 }
 
-/* SECTIONS */
+/* SECTIONS - HOMEPAGE*/
 .label {
   font-weight: bold;
 }   
@@ -216,19 +216,20 @@ h2 {
   display: none;
 }
 
-/* CTA Section */
+/* CALL TO ACTION Section - HOMEPAGE*/
 .cta {
+  position: absolute;
+  top: 25%;
+  left: 85%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  background-color: var(--accent1-color);
-  margin: 1rem;
-  border: solid black;
+  color: white;
 }
 
 .cta-button {
-  display: inline-block;
   margin: 1rem;
   padding: 0.75rem 1.5rem;
-  background-color: var(--primary-color);
+  background-color: var(--accent2-color);
   color: var(--accent1-color);
   text-decoration: none;
   font-weight: bold;
@@ -236,7 +237,8 @@ h2 {
 }
 
 .cta-button:hover {
-  background-color: var(--accent2-color);
+  background-color: rgba(144, 238, 144, 0.837);
+  color: black;
 }
 
 /* SPOTLIGHT Section */
