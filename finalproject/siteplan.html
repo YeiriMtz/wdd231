@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yeiri Martinez">
+  <meta name="description" content="This site plan is a living document that may change as the project progresses. It is used to communicate with the client and the development team.">
+  <title>Site Plan Page - Zu’s Creative Bliss</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/zulies.css"/>
+  <!--  Disables background image only for this page -->
+  <style>
+    .background {
+      background-image: none;
+      background-color: #9f2e76;
+    }
+  </style>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Mansalva&family=Shadows+Into+Light&display=swap" rel="stylesheet"/>
+
+  <!-- JAVA SCRIPT -->
+  <script src="scripts/zulies.js" defer></script>
+</head>
+<body>
+  <div class="background">
+    <header>
+      <nav class="navigation">
+        <img src="images/LOGO2.png" alt="Zu’s Logo">
+        <h1>Zu’s Creative Bliss 🎨</h1>
+        <button id="hamburger" aria-label="Menu">☰</button>
+        <div class="nav-links">
+          <a href="siteplan.html">Site Plan</a>
+          <a href="home.html">Home</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="siteplan-content">
+      <section>
+        <h2>Site Name</h2>
+        <p><strong>Name: </strong>Zu’s Creative Bliss</p>
+        <p><strong>Description: </strong></p>
+      </section>
+
+      <section>
+        <h2>Site Purpose</h2>
+        <p></p>
+      </section>
+
+      <section>
+        <h2>Visitor Scenarios</h2>
+        <ul>
+          <li>How can I book a photography session with Yeiri?</li>
+          <li>Where can I see examples of Yeiri's past photography work?</li>
+          <li>How do I contact Yeiri with questions or custom session requests?</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Color Schema</h2>
+        <ul>
+          <li><strong>Primary Color:</strong> #0599c2 — Used for the page background and main color theme.</li>
+          <li><strong>Secondary Color:</strong> rgba(255, 255, 255, 0.789) — Used for text and contrast areas.</li>
+          <li><strong>Accent 1:</strong> #8ec4dc — A soft blue used for highlights, subtle accents, and background shades.</li>
+          <li><strong>Accent 2:</strong> #06657f — Used for buttons, hover states, and call-to-action elements.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Typography</h2>
+        <ul>
+          <li><strong>Shadows Into Light</strong> (Google Font) — Used for main headings (e.g., site title).</li>
+          <li><strong>Sans-serif</strong> — Used for body text, form inputs, and descriptions for clean readability.</li>
+        </ul>
+      </section>
+
+      <section class="wireframes">
+        <h2>Wireframes</h2>
+        <p>Below are the wireframe layouts for the home page in both mobile and desktop views.</p>
+
+        <div class="wireframe-container">
+          <figure>
+            <figcaption>Mobile View Wireframe</figcaption>
+            <img src="images/wireframe-mobile.png" alt="Mobile Wireframe of Home Page" loading="lazy">
+          </figure>
+
+          <figure>
+            <figcaption>Desktop View Wireframe</figcaption>
+            <img src="images/Desktop-Wireframe.png" alt="Desktop Wireframe of Home Page" loading="lazy">
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <p>© | <span id="currentyear"></span> | Zu’s Creative Bliss</p>
+        <p>Last update: <span id="lastModified"></span></p>
+
+        <nav class="socialinks">
+                <a href="https://www.facebook.com/">
+                    <img src="images/facebook.webp" alt="Facebook" loading="lazy">
+                </a>
+                <a href="https://www.tiktok.com/@zus_creative_bliss?lang=en">
+                    <img src="images/tiktok.webp" alt="TikTok" loading="lazy">
+                </a>
+                <a href="https://www.instagram.com/zus_creative_bliss/">
+                    <img src="images/instagram.webp" alt="Instagram" loading="lazy">
+                </a>
+            </nav>
+      </div>  
+    </footer>
+  </div>
+</body>
+</html>
