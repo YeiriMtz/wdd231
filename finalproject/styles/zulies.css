@@ -1,8 +1,9 @@
 :root { 
-    --background-color: #9f2e76;
-    --primary-color: pink;
-    --accent1-color: white;
-    --accent2-color: black;
+    --background-1: #9f2e76;
+    --backgroun-2: #5c1b44;
+    --primary-color: #ffc0cb;
+    --accent1-color: #000000;
+    --accent2-color: #ffffff;
 }
 
 html, body {
@@ -30,7 +31,7 @@ html, body {
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  background-color: #5c1b44;
+  background-color: var(--backgroun-2);
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -75,7 +76,7 @@ html, body {
 
 .siteplan-content h2 {
   font-size: 2.5rem;
-  color: var(--primary-color);
+  color: var(--backgroun-2);
   font-family: "Shadows Into Light", cursive;
   margin-bottom: 1rem;
   text-align: center;
