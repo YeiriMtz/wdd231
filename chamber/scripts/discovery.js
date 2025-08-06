@@ -27,3 +27,31 @@ async function loadDiscoveryItems() {
 }
 
 document.addEventListener('DOMContentLoaded', loadDiscoveryItems);
+
+function displayLastVisitMessage() {
+  const messageEl = document.getElementById('visit-message');
+  if (!messageEl) return; // safety check
+
+  const now = new Date();
+  const lastVisit = localStorage.getItem('lastVisit');
+  
+  if (!lastVisit) {
+    // First visit
+    messageEl.textContent = "Welcome! Let us know if you have any questions.";
+  } else {
+    const lastVisitDate = new Date(lastVisit);
+    const diffMs = now - lastVisitDate;
+    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+    if (diffDays < 1) {
+      messageEl.textContent = "Back so soon! Awesome!";
+    } else {
+      messageEl.textContent = `You last visited ${diffDays} ${diffDays === 1 ? 'day' : 'days'} ago.`;
+    }
+  }
+
+  // Update lastVisit for next time
+  localStorage.setItem('lastVisit', now.toISOString());
+}
+
+document.addEventListener('DOMContentLoaded', displayLastVisitMessage);

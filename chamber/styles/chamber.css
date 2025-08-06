@@ -497,3 +497,34 @@ img {
 .discovery-grid > :nth-child(6) { grid-area: card6; }
 .discovery-grid > :nth-child(7) { grid-area: card7; }
 .discovery-grid > :nth-child(8) { grid-area: card8; }
+
+/* Visit banner container */
+#visit-banner {
+  background-color: var(--accent1-color);
+  color: var(--background-color);
+  border: 2px solid var(--background-color);
+  border-radius: 8px;
+  max-width: 700px;
+  margin: 1rem auto;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  user-select: none;
+}
+
+/* Visit message text */
+.visit-message {
+  margin: 0;
+}
+
+/* Make sure the banner stays nicely spaced on small screens */
+@media (max-width: 480px) {
+  #visit-banner {
+    max-width: 90%;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+  }
+}
+
