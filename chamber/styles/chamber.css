@@ -410,3 +410,90 @@ img {
   }
 }
 
+/* === DISCOVERY PAGE STYLES === */
+
+.discovery-grid {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.discovery-card {
+  background-color: var(--accent1-color);
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.discovery-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.discovery-card button {
+  margin-top: auto;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: var(--background-color);
+  color: var(--accent1-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.discovery-card button:hover {
+  background-color: var(--accent2-color);
+  color: #fff;
+}
+
+/* Small screens (1 column) */
+@media (max-width: 640px) {
+  .discovery-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "card1"
+      "card2"
+      "card3"
+      "card4"
+      "card5"
+      "card6"
+      "card7"
+      "card8";
+  }
+}
+
+/* Medium screens (2 columns) */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .discovery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "card1 card2"
+      "card3 card4"
+      "card5 card6"
+      "card7 card8";
+  }
+}
+
+/* Large screens (4 columns) */
+@media (min-width: 1025px) {
+  .discovery-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "card1 card2 card3 card4"
+      "card5 card6 card7 card8";
+  }
+}
+
+/* Assign grid-area names for each card */
+.discovery-grid > :nth-child(1) { grid-area: card1; }
+.discovery-grid > :nth-child(2) { grid-area: card2; }
+.discovery-grid > :nth-child(3) { grid-area: card3; }
+.discovery-grid > :nth-child(4) { grid-area: card4; }
+.discovery-grid > :nth-child(5) { grid-area: card5; }
+.discovery-grid > :nth-child(6) { grid-area: card6; }
+.discovery-grid > :nth-child(7) { grid-area: card7; }
+.discovery-grid > :nth-child(8) { grid-area: card8; }

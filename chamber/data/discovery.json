@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "name": "Museo Casa Chihuahua",
+      "image": "images/casa-chihuahua.webp",
+      "address": "Libertad 901, Zona Centro, 31000 Chihuahua, Chih.",
+      "description": "A museum housed in a historic building showcasing regional history and culture."
+    },
+    {
+      "name": "Catedral de Chihuahua",
+      "image": "images/catedral.webp",
+      "address": "Av. Independencia 100, Zona Centro, 31000 Chihuahua, Chih.",
+      "description": "An 18th-century baroque cathedral with intricate architecture and rich history."
+    },
+    {
+      "name": "Pancho Villa Museum",
+      "image": "images/pancho-villa.webp",
+      "address": "Av. División del Norte 2300, Chihuahua, Chih.",
+      "description": "Museum dedicated to the life and legacy of revolutionary leader Pancho Villa."
+    },
+    {
+      "name": "Quinta Gameros",
+      "image": "images/quinta-gameros.webp",
+      "address": "Calle 10a 507, Zona Centro, 31000 Chihuahua, Chih.",
+      "description": "A stunning art nouveau mansion showcasing decorative arts and architecture."
+    },
+    {
+      "name": "Grutas Nombre de Dios",
+      "image": "images/grutas.webp",
+      "address": "Carretera a Aldama Km 4, Chihuahua, Chih.",
+      "description": "Natural caves with guided tours featuring amazing underground rock formations."
+    },
+    {
+      "name": "Parque El Rejón",
+      "image": "images/rejon.webp",
+      "address": "Circuito Universitario, Chihuahua, Chih.",
+      "description": "Urban park with walking trails, bike lanes, and a tranquil lake."
+    },
+    {
+      "name": "Centro Cultural Universitario",
+      "image": "images/ccu.webp",
+      "address": "Campus II, Universidad Autónoma de Chihuahua.",
+      "description": "Cultural hub offering art exhibits, theater performances, and concerts."
+    },
+    {
+      "name": "La Cabaña Smokehouse",
+      "image": "images/cabana.webp",
+      "address": "Periférico de la Juventud 6103, Chihuahua, Chih.",
+      "description": "A local favorite BBQ restaurant known for smoked meats and rustic atmosphere."
+    }
+  ]
+}
