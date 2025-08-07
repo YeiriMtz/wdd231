@@ -150,30 +150,36 @@ header h1 span {
   border-radius: 5px;
 }
 
-/* ALL FOOTER STYLE*/
+/* ALL FOOTERS STYLE*/
 footer {
-  margin-top: auto;
-  padding: 5px 10px;
+  margin-top: 10px;
+  padding: 10px;
   background-color: var(--background-2);
-  
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   color: var(--accent2-color);
 }
+
 .footer-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 5px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem; /* add some spacing between columns */
+  padding: 1rem;
 }
+
+.socialinks {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    margin: 10%;
+}
+
 .socialinks a {
-    text-decoration: none;
+  text-decoration: none;
+  margin: 0 10px;
 }
+
 .socialinks img {
-    height: 50px;
-    width: auto;
-}
-.footer-container a {
-    text-decoration: none;
+  height: 60px;
+  width: auto;
 }
 
 /* ===== MOBILE STYLES ===== */
@@ -276,15 +282,25 @@ footer {
     text-align: center;
   }
 
+  /* Medium screens: 2 columns */
+@media (max-width: 900px) {
   .footer-container {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small screens: 1 column */
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center; /* optional, center content */
   }
 
-  .socialinks img {
-    height: 40px;
+  /* Optional: spacing below each block */
+  .footer-container > div {
+    margin-bottom: 1.5rem;
   }
+}
 
   .siteplan-content {
     padding: 1rem;
