@@ -155,23 +155,24 @@ header h1 span {
     display: flex;
     justify-content: center;
     align-items: stretch; 
-    gap: 2rem;
     padding: 1rem;
+    margin: 1%;
 }
 
 .bio-section,
 .get-in-touch {
     flex: 1;
-    max-width: 600px;
+    max-width: 100%;
     display: flex;
     flex-direction: column; 
+    box-shadow: 0 2px 8px rgba(45, 48, 48, 0.734);
 }
 
 .bio-section {
     font-size: 20px;
     margin: 15px;
     border-radius: 5px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    
 }
 
 .bio-section article {
@@ -202,7 +203,9 @@ header h1 span {
 }
 
 .get-in-touch {
+   font-size: 20px;
     margin: 15px;
+    border-radius: 5px;
 }
 
 .get-in-touch form {
@@ -216,7 +219,7 @@ header h1 span {
     color: var(--accent1-color);
     font-family: sans-serif;
     font-size: 20px;
-    width: 100%;    
+    width: auto;    
 }
 
 fieldset {
@@ -374,7 +377,7 @@ footer {
 
   .bio-section,
   .get-in-touch {
-    width: 90%;
+    width: 100%;
     max-width: 400px;
     margin: 1rem auto;
     box-sizing: border-box;
