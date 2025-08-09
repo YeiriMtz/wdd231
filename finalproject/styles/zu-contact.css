@@ -1,0 +1,107 @@
+:root { 
+    --background-1: #9149e4;
+    --background-2: #41aec4cd;
+    /* --primary-color: #e0cf83e9; */
+    --accent1-color: #000000;
+    --accent2-color: #ffffff;
+    --boxes-background: #e0cf837b;
+}
+
+.contact-page h2, h3 {
+  text-align: center;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.our-info {
+    text-align: center;
+    margin: 10px 10px;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: var(--boxes-background);
+    color: var(--accent1-color);
+    font-size: 20px;
+}
+
+form {
+    margin: 10px 10px;
+    padding: 25px;
+    background-color: var(--boxes-background);
+    border-radius: 10px;
+    color: var(--secondary-color);
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+legend {
+    font-size: 1.5em;
+    margin-bottom: 16px;    
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: 500;
+}
+
+  input,
+  textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    background: transparent;
+    color: #fff;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #ccc;
+}
+
+  .radio-group {
+    text-align: left;
+}
+
+.radio-group label {
+  display: inline-block;
+  margin-right: 1em;
+  font-size: smaller;
+  vertical-align: middle;
+}
+
+input[type="radio"] {
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+}
+
+textarea {
+    resize: vertical;
+  }
+
+button {
+    display: block;
+    width: 50%;
+    margin: 20px auto;
+    padding: 8px 12px;
+    background-color: var(--accent2-color);
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+}
