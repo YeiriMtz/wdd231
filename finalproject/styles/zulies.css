@@ -1,9 +1,10 @@
 :root { 
-    --background-1: #9f2e76;
-    --background-2: #5c1b44;
-    --primary-color: #ffc0cb;
+    --background-1: #c549e4;
+    --background-2: #1fa2bcbc;
+    /* --primary-color: #e0cf83e9; */
     --accent1-color: #000000;
     --accent2-color: #ffffff;
+    --boxes-background: #e0cf8394;
 }
 
 html, body {
@@ -19,7 +20,7 @@ html, body {
     flex: 1; 
     display: flex;
     flex-direction: column;
-    background-image: url(../images/background.webp);
+    background-image: url(/finalproject/images/zu-background.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -34,7 +35,7 @@ header {
   background-color: var(--background-2);
   flex-wrap: wrap;
   gap: 1rem;
-  color: var(--accent2-color);
+  color: var(--accent1-color);
 }
 
 header img {
@@ -72,7 +73,7 @@ header h1 span {
 }
 
 .navigation a:hover {
-  text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
+  text-shadow: 0 0 10px var(--background-2), 0 0 20px var(--background-2);
 }
 
 #hamburger {
@@ -80,7 +81,6 @@ header h1 span {
   font-size: 2rem;
   background: none;
   border: none;
-  color: black;
   cursor: pointer;
   z-index: 1000;
 }
@@ -150,20 +150,150 @@ header h1 span {
   border-radius: 5px;
 }
 
+/* HOMEPAGE */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; 
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.bio-section,
+.get-in-touch {
+    flex: 1;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column; 
+}
+
+.bio-section {
+    font-size: 20px;
+    margin: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bio-section article {
+    flex: 1; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: x-large;
+    color: var(--accent1-color);
+    background-color: var(--boxes-background);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.bio-section article img {
+    width: 50%;
+    height: auto;
+    border-radius: 5px;
+    margin-left: 15px;
+    float: none;
+}
+
+.bio-section article p {
+    flex: 1;
+    margin: 0;
+    text-align: left;
+    color: var(--secondary-color);
+}
+
+.get-in-touch {
+    margin: 15px;
+}
+
+.get-in-touch form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--boxes-background);
+    border-radius: 5px;
+    color: var(--accent1-color);
+    font-family: sans-serif;
+    font-size: 20px;
+    width: 100%;    
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+legend {
+    font-size: 1.5em;
+    margin-bottom: 16px;    
+    font-weight: bold;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: 500;
+}
+
+input,
+textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid var(--accent1-color);
+    font-size: 1em;
+    background: transparent;
+    color: var(--accent1-color);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--accent1-color);
+}
+
+.newsletter-button,
+.get-in-touch-button {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    margin: 20px auto;
+    padding: 8px;
+    background-color: var(--background-2);
+    color: var(--accent1-color);
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+
+button:hover,
+.newsletter-button:hover,
+.get-in-touch-button:hover {
+    background-color: var(--background-1);
+    color: var(--accent2-color);
+} 
+
 /* ALL FOOTERS STYLE*/
 footer {
   margin-top: 10px;
   padding: 10px;
   background-color: var(--background-2);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  color: var(--accent2-color);
+  color: var(--accent1-color);
 }
 
 .footer-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem; /* add some spacing between columns */
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .socialinks {
@@ -208,13 +338,13 @@ footer {
     position: absolute;
     top: 10px;
     right: 15px;
-    color: var(--accent2-color);
+    color: var(--accent1-color);
   }
   .nav-links {
     display: none;
     flex-direction: column;
     gap: 1rem;
-    background-color: var(--primary-color);
+    background-color: var(--boxes-background);
     padding: 1rem;
     border-radius: 5px;
     text-align: center;
@@ -226,7 +356,7 @@ footer {
   }
 
   .navigation a:hover {
-  text-shadow: 0 0 10px var(--background-2), 0 0 20px var(--background-1);
+  text-shadow: 0 0 10px var(--background-1), 0 0 20px var(--background-1);
 }
 
   .main-container {
