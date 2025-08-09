@@ -35,8 +35,44 @@
   </nav>
 </header>
 
-<main>
-
+<main class="contact-page">
+  <h2>Contact Information</h2>
+  <h3>Feel free to call, use the form or drop an email</h3>
+  <div class="contact-content">
+  <div class="our-info">
+      <p>374 324 3888</p>
+      <p>486 Tori Lane, Salt Lake City, UT, 84116
+      <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3027.2336680222365!2d-111.94522922397753!3d40.64677927140346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87528b645446e9af%3A0x27c9c29a907718f6!2sGuitar%20Center!5e0!3m2!1sen!2smx!4v1743896979498!5m2!1sen!2smx" width="500" height="400" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+  </div>
+  <form>
+      <fieldset>
+        <!-- full name -->
+        <label for="first-name">Name</label>
+        <input type="text" name="first-name" id="first-name" placeholder="First">
+        <label for="last-name"></label>
+        <input type="text" name="last-name" id="last-name" placeholder="Last">
+        <!-- email address -->
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" placeholder="example@email.com">
+        <!-- phone number -->
+        <label for="phone">Phone</label>
+        <input type="text" name="phone" id="phone" placeholder="xxx-xxx-xxxx">
+        <!-- purpose of message -->
+        <p>Purpose of Message</p>
+        <div class="radio-group">
+          <label><input type="radio" name="purpose" value="1">General Inquiry</label>
+          <label><input type="radio" name="purpose" value="2">Reservation Question</label>
+          <label><input type="radio" name="purpose" value="3">Website Suggestion</label>
+        </div>
+        <!-- message -->
+        <label for="message">Send Us a Message</label>
+        <textarea name="message" id="message" rows="6" cols="60" placeholder="Type your message..."></textarea>
+      </fieldset>
+      <button type="submit">Send My Info</button>
+  </form>
+  </div>
 </main>
 
 <footer>
