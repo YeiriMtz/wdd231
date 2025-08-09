@@ -1,10 +1,10 @@
 :root { 
-    --background-1: #c549e4;
-    --background-2: #1fa2bcbc;
+    --background-1: #9149e4;
+    --background-2: #41aec4cd;
     /* --primary-color: #e0cf83e9; */
     --accent1-color: #000000;
     --accent2-color: #ffffff;
-    --boxes-background: #e0cf8394;
+    --boxes-background: #e0cf837b;
 }
 
 html, body {
@@ -73,7 +73,7 @@ header h1 span {
 }
 
 .navigation a:hover {
-  text-shadow: 0 0 10px var(--background-2), 0 0 20px var(--background-2);
+  text-shadow: 0 0 10px var(--background-1), 0 0 20px var(--background-1);
 }
 
 #hamburger {
