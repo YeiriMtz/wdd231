@@ -253,7 +253,13 @@ textarea {
 
 input::placeholder,
 textarea::placeholder {
-    color: var(--accent1-color);
+    color: rgba(99, 99, 99, 0.593);
+}
+
+h6 {
+  text-align: center;
+  font-style: italic;
+  font-weight: lighter;
 }
 
 .newsletter-button,
