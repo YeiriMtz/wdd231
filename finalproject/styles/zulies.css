@@ -8,22 +8,22 @@
 }
 
 html, body {
-    
     margin: 0;
     padding: 0;
     height: 100%;
     display: flex;
     flex-direction: column;
+    font-family: "Rasa", serif;
 }
 
 .background {
-    flex: 1; 
-    display: flex;
-    flex-direction: column;
-    background-image: url(/finalproject/images/zu-background.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  background-image: url(/finalproject/images/zu-background.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* ALL HEADER / NAVIGATION STYLE*/
@@ -45,13 +45,10 @@ header img {
 
 header h1 {
   color: var(--secondary-color);
-  font-size: 1.5rem;
+  font-size: 5rem;
   margin: 0;
-  flex-grow: 1;
-}
-
-header h1 span {
-  font-weight: bold;
+  font-family: "Luxurious Script", cursive;
+  font-weight: lighter;
 }
 
 .navigation {
@@ -172,14 +169,10 @@ header h1 span {
     font-size: 20px;
     margin: 15px;
     border-radius: 5px;
-    
 }
 
 .bio-section article {
     flex: 1; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     font-size: x-large;
     color: var(--accent1-color);
     background-color: var(--boxes-background);
@@ -188,11 +181,11 @@ header h1 span {
 }
 
 .bio-section article img {
-    width: 50%;
+    float: left;
+    width: 40%;
     height: auto;
     border-radius: 5px;
-    margin-left: 15px;
-    float: none;
+    margin: 0 15px 15px 0;
 }
 
 .bio-section article p {
@@ -219,7 +212,8 @@ header h1 span {
     color: var(--accent1-color);
     font-family: sans-serif;
     font-size: 20px;
-    width: auto;    
+    width: auto;
+    
 }
 
 fieldset {
