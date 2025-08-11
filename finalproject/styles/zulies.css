@@ -1,9 +1,9 @@
 :root { 
     --background-1: #9149e4;
-    --background-2: #41aec4cd;
+    --background-2: #41aec4a9;
     /* --primary-color: #e0cf83e9; */
     --accent1-color: #000000;
-    --accent2-color: #ffffff;
+    --accent2-color: #e8e8e8;
     --boxes-background: #e0cf837b;
 }
 
@@ -52,6 +52,7 @@ header h1 {
   margin: 0;
   font-family: "Luxurious Script", cursive;
   font-weight: lighter;
+  text-shadow: 2px 2px 4px var(--accent2-color);
 }
 
 .navigation {
