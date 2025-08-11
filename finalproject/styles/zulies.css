@@ -330,13 +330,13 @@ footer {
 .footer-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem; /* add some spacing between columns */
+  gap: 1rem;
   padding: 2rem;
 }
 
 .socialinks {
   display: grid;
-  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-template-columns: 33.3% 33.3% 33.3% 33.3%;
   margin: 10%;
 }
 
