@@ -414,12 +414,12 @@ footer {
   }
 
   .bio-section article img {
-    width: 70%;
+    width: 50%;
     max-width: 250px;
-    margin: 1rem auto 0;
+    margin: 1rem;
     display: block;
   }
-
+  
   .get-in-touch {
     margin: 1rem auto;
     text-align: center;
