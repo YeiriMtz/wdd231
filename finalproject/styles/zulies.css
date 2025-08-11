@@ -1,10 +1,9 @@
 :root { 
     --background-1: #9149e4;
-    --background-2: #41aec4a9;
-    /* --primary-color: #e0cf83e9; */
-    --accent1-color: #000000;
-    --accent2-color: #e8e8e8;
-    --boxes-background: #e0cf837b;
+    --background-2: #02406e;
+    --accent1-color: black;
+    --accent2-color: gold;
+    --boxes-background: rgba(179, 161, 96, 0.384);
 }
 
 html, body {
@@ -17,13 +16,14 @@ html, body {
 
 .main-container{
   font-family: "Rasa", serif;
+  font-weight: lighter;
 }
 
 .background {
   flex: 1; 
   display: flex;
   flex-direction: column;
-  background-image: url('../images/zu-background.png');
+  /* background-image: url('../images/zu-background.png'); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -38,7 +38,7 @@ header {
   background-color: var(--background-2);
   flex-wrap: wrap;
   gap: 1rem;
-  color: var(--accent1-color);
+  color: var(--accent2-color);
 }
 
 header img {
@@ -46,12 +46,12 @@ header img {
 }
 
 header h1 {
-  color: var(--secondary-color);
+  color: white;
   font-size: 5rem;
   margin: 0;
   font-family: "Luxurious Script", cursive;
   font-weight: lighter;
-  text-shadow: 2px 2px 4px var(--accent2-color);
+  text-shadow: 2px 2px 4px black;
 }
 
 .navigation {
@@ -73,7 +73,7 @@ header h1 {
 }
 
 .navigation a:hover {
-  text-shadow: 0 0 10px var(--background-1), 0 0 20px var(--background-1);
+  text-decoration: overline white;
 }
 
 #hamburger {
@@ -323,7 +323,7 @@ footer {
   padding: 10px;
   background-color: var(--background-2);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  color: var(--accent1-color);
+  color: var(--accent2-color);
 }
 
 .footer-container {
