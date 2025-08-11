@@ -42,8 +42,7 @@ header {
 }
 
 header img {
-  height: 50px;
-  width: auto;
+  height: 100px;
 }
 
 header h1 {
@@ -361,7 +360,7 @@ footer {
 }
 
   header img {
-  height: 40px;
+  height: 150px;
 }
 
   header h1 {
