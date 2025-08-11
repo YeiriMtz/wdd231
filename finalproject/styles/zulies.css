@@ -360,7 +360,7 @@ footer {
 }
 
   header img {
-  height: 150px;
+  height: 170px;
 }
 
   header h1 {
@@ -375,9 +375,11 @@ footer {
   #hamburger {
   display: block;
   position: absolute;
-  top: 10px;
+  top: 15px;
   right: 15px;
   color: var(--accent1-color);
+  width: 90px;
+  height: auto;
 }
 
   .nav-links {
