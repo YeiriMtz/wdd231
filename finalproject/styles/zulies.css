@@ -290,8 +290,8 @@ h6 {
 button:hover,
 .newsletter-button:hover,
 .get-in-touch-button:hover {
-  background-color: rgb(177, 40, 138);
-  color: var(--accent2-color);
+  background-color: rgb(27, 134, 45);
+  color: var(--primary-color);
 } 
 
 /* GALLERY PAGE */
