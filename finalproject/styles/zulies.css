@@ -381,6 +381,7 @@ footer {
   right: 15px;
   color: var(--accent1-color);
 }
+
   .nav-links {
   display: none;
   flex-direction: column;
@@ -464,10 +465,21 @@ footer {
 @media (max-width: 600px) {
   .footer-container {
     grid-template-columns: 1fr;
-    text-align: center; /* optional, center content */
+    text-align: center; 
 }
 
-  /* Optional: spacing below each block */
+.socialinks {
+  justify-content: center; 
+  grid-template-columns: repeat(4, auto); 
+  gap: 1rem; 
+  margin: 1rem 0; 
+}
+
+.socialinks img {
+  height: 40px; /* smaller icons on mobile */
+}
+
+  /*spacing below each block */
   .footer-container > div {
     margin-bottom: 1.5rem;
   }
