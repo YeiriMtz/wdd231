@@ -1,10 +1,9 @@
 :root { 
-    --background-1: #9149e4;
-    --background-2: #41aec4cd;
-    /* --primary-color: #e0cf83e9; */
-    --accent1-color: #000000;
-    --accent2-color: #ffffff;
-    --boxes-background: #e0cf837b;
+    --primary-color: #ebf6fc;
+    --background-2: #02406e;
+    --accent1-color: black;
+    --accent2-color: #ffd700;
+    --boxes-background: rgba(221, 198, 119, 0.428);
 }
 
 .contact-page h2, h3 {
@@ -98,8 +97,8 @@ button {
     width: 50%;
     margin: 20px auto;
     padding: 8px 12px;
-    background-color: var(--accent2-color);
-    color: white;
+    background-color: var(--background-2);
+    color: var(--accent2-color);
     font-size: 1em;
     font-weight: bold;
     border: none;
