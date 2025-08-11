@@ -93,14 +93,17 @@ textarea {
   }
 
 button {
-    display: block;
-    width: 50%;
-    margin: 20px auto;
-    padding: 8px 12px;
-    background-color: var(--background-2);
-    color: var(--accent2-color);
-    font-size: 1em;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  margin: 20px auto;
+  padding: 8px;
+  background-color: var(--background-2);
+  color: var(--accent2-color);
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
 }
