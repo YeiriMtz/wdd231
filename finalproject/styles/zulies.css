@@ -337,7 +337,6 @@ footer {
 .socialinks {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
   justify-items: center;
   align-items: center;
   margin: 0;
@@ -345,7 +344,7 @@ footer {
 
 .socialinks a {
   text-decoration: none;
-  margin: 0 10px;
+  margin: 0 5px;
 }
 
 .socialinks img {
