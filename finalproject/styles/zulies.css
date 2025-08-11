@@ -185,10 +185,11 @@ header h1 {
 
 .bio-section article img {
     float: left;
-    width: 40%;
+    width: 30%;
     height: auto;
     border-radius: 5px;
-    margin: 0 15px 15px 0;
+    margin: 2%;
+    margin-right: 5%;
 }
 
 .bio-section article p {
@@ -196,6 +197,7 @@ header h1 {
     margin: 0;
     text-align: left;
     color: var(--secondary-color);
+    margin-bottom: 1em; /* or adjust to your liking */
 }
 
 .get-in-touch {
