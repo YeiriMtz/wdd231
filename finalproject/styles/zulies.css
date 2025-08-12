@@ -350,6 +350,13 @@ footer {
   width: auto;
 }
 
+.author-info-left p:nth-child(4) {
+  -webkit-phone-number-detection: none;
+  color: var(--accent2-color);   /* use the same footer text color to fix on Safari browsers */
+  text-decoration: none;
+  cursor: default;
+}
+
 /* ===== MOBILE STYLES ===== */
 @media screen and (max-width: 768px) {
   header {
