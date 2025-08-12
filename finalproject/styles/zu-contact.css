@@ -27,6 +27,13 @@
   font-size: 20px;
 }
 
+.our-info p:nth-child(2) {
+  -webkit-phone-number-detection: none;
+  color: inherit;      /* keep the normal color, fixes Safari problem */
+  text-decoration: none;
+  cursor: default;
+}
+
 form {
   margin: 10px 10px;
   padding: 25px;
