@@ -43,5 +43,5 @@ document.getElementById('subscribeForm').addEventListener('submit', function(eve
     message: encodeURIComponent(message)
   });
 
-  window.location.href = 'thankyou.html?' + params.toString();
+  window.location.href = 'user-message.html?' + params.toString();
 });
