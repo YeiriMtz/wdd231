@@ -375,12 +375,8 @@ footer {
 }
 
 .phone-number:hover {
-  text-decoration: underline !important;
+  text-decoration: none !important;
 }
-
-/* .thankyou-page {
-  text-align: center;
-} */
 
 /* ===== MOBILE STYLES ===== */
 @media screen and (max-width: 768px) {
