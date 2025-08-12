@@ -350,9 +350,9 @@ footer {
   width: auto;
 }
 
-.author-info-left p:nth-child(4) {
-  -webkit-phone-number-detection: none;
-  color: var(--accent2-color);   /* use the same footer text color to fix on Safari browsers */
+.phone-number {
+  -webkit-phone-number-detection: none; /* disables auto-link styling on Safari */
+  color: inherit;      /* keeps the current text color */
   text-decoration: none;
   cursor: default;
 }
