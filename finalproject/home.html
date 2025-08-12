@@ -30,6 +30,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   <!-- JAVA SCRIPT -->
   <script src="scripts/zulies.js" defer></script>
+  <script src="scripts/subscribe.js" defer></script>
 </head>
 
 <body>
@@ -61,21 +62,22 @@
 
   <!-- GET IN TOUCH -->
   <section class="get-in-touch">
-    <form>
+    <form id="subscribeForm">
       <h3>Want to receive weekly news about my art?</h3>
       <fieldset>
         <legend class="home-form-legend">SUBSCRIBE!</legend>
         <!-- name -->
         <label for="first-name">Name</label>
-        <input type="text" name="first-name" id="first-name" placeholder="Your Name Here">
+        <input type="text" name="first-name" id="first-name" placeholder="Your Name Here" required>
         <!-- email address -->
         <label for="email">Email</label>
-        <input type="text" name="email" id="email" placeholder="example@email.com">
+        <input type="email" name="email" id="email" placeholder="example@email.com" required>
         <h6>"Creation is not in the object, but in the quiet dialogue between chaos and stillness."</h6>
       </fieldset>
-        <a href="contact.html" class="newsletter-button">Send</a>
+      <button type="submit" class="newsletter-button">Send</button>
     </form>
   </section>
+
   </div>
   </main>
 
