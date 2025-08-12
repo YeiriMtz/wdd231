@@ -30,6 +30,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   <!-- JAVA SCRIPT -->
   <script src="scripts/zulies.js" defer></script>
+  <script src="scripts/contact-subscribe.js" defer></script>
 </head>
 <body>
 <div class="background">
@@ -60,7 +61,7 @@
     </div>
   </div>
 
-  <form>
+  <form id="subscribeForm">
       <fieldset>
         <!-- full name -->
         <label for="first-name">Name</label>
@@ -71,7 +72,7 @@
         <label for="email">Email</label>
         <input type="text" name="email" id="email" placeholder="example@email.com">
         <!-- phone number -->
-        <label for="phone">Phone</label>
+        <label for="phone">Phone (Optional)</label>
         <input type="text" name="phone" id="phone" placeholder="xxx-xxx-xxxx">
         <!-- purpose of message -->
         <p>Purpose of Message</p>
@@ -84,7 +85,7 @@
         <label for="message">Send Us a Message</label>
         <textarea name="message" id="message" rows="6" cols="60" placeholder="Type your message..."></textarea>
       </fieldset>
-      <button type="submit">Send My Info</button>
+      <button type="submit" class="newsletter-button">Send My Info</button>
   </form>
   </div>
 </main>
