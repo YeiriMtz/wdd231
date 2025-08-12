@@ -6,8 +6,10 @@
   --boxes-background: rgba(221, 198, 119, 0.428);
 }
 
-.contact-page h2, h3 {
+.contact-page h3 {
   text-align: center;
+  font-weight: lighter;
+  font-style: italic;
 }
 
 .contact-content {
