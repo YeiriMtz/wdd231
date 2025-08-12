@@ -7,11 +7,19 @@
 }
 
 html, body {
-  margin: 0;
-  padding: 0;
   height: 100%;
+  margin: 0;
+}
+
+body {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+}
+
+.thankyou-page {
+  flex: 1 0 auto;  
+  min-height: 0; 
 }
 
 .page-title {
@@ -359,6 +367,10 @@ footer {
 
 .phone-number:hover {
   text-decoration: underline !important;
+}
+
+.thankyou-page {
+  text-align: center;
 }
 
 /* ===== MOBILE STYLES ===== */
