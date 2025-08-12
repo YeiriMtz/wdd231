@@ -4,6 +4,9 @@
     --accent1-color: black;
     --accent2-color: #ffd700;
     --boxes-background: rgba(221, 198, 119, 0.428);
+    --primary-text: "Faustina", serif;
+    --accent-text: "Rasa", serif;
+    --title-text: "Luxurious Script", cursive;
 }
 
 html, body {
@@ -26,17 +29,17 @@ body {
   min-height: 0;        
   text-align: center;
   padding: 1rem;
-  font-family: "Faustina", serif;
+  font-family: var(--primary-text);
   font-weight: lighter;
 
 }
 
 .page-title {
   text-align: center;
-  font-family: "Faustina", serif;
+  font-family: var(--primary-text);
 }
 .main-container{
-  font-family: "Rasa", serif;
+  font-family: var(--accent-text);
   font-weight: lighter;
 }
 
@@ -61,7 +64,7 @@ header {
   flex-wrap: wrap;
   gap: 1rem;
   color: var(--accent2-color);
-  font-family: "Faustina", serif;
+  font-family: var(--primary-text);
 }
 
 header img {
@@ -72,7 +75,7 @@ header h1 {
   color: var(--primary-color);
   font-size: 5rem;
   margin: 0;
-  font-family: "Luxurious Script", cursive;
+  font-family: var(--title-text);
   font-weight: lighter;
   text-shadow: 2px 2px 4px black;
 }

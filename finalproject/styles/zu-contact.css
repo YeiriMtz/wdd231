@@ -4,6 +4,9 @@
   --accent1-color: black;
   --accent2-color: #ffd700;
   --boxes-background: rgba(221, 198, 119, 0.428);
+  --primary-text: "Faustina", serif;
+  --accent-text: "Rasa", serif;
+  --title-text: "Luxurious Script", cursive;
 }
 
 .contact-page h3 {
@@ -41,6 +44,11 @@ fieldset {
   border: none;
   padding: 0;
   margin: 0 0 20px 0;
+}
+
+fieldset h2 {
+  text-align: center;
+
 }
 
 legend {
