@@ -351,10 +351,14 @@ footer {
 }
 
 .phone-number {
-  -webkit-phone-number-detection: none; /* disables auto-link styling on Safari */
-  color: inherit;      /* keeps the current text color */
-  text-decoration: none;
-  cursor: default;
+  -webkit-phone-number-detection: none !important;
+  color: inherit !important;
+  text-decoration: none !important;
+  cursor: default !important;
+}
+
+.phone-number:hover {
+  text-decoration: underline !important;
 }
 
 /* ===== MOBILE STYLES ===== */
