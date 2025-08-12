@@ -16,6 +16,7 @@ html, body {
 
 .page-title {
   text-align: center;
+  font-family: "Faustina", serif;
 }
 .main-container{
   font-family: "Rasa", serif;
@@ -43,6 +44,7 @@ header {
   flex-wrap: wrap;
   gap: 1rem;
   color: var(--accent2-color);
+  font-family: "Faustina", serif;
 }
 
 header img {
