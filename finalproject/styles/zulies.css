@@ -367,6 +367,14 @@ footer {
   width: auto;
 }
 
+.author-info-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 .phone-number {
   -webkit-phone-number-detection: none !important;
   color: inherit !important;
