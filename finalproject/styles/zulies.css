@@ -23,13 +23,13 @@ html, body {
 }
 
 .background {
-  flex: 1; 
+  /* flex: 1; 
   display: flex;
   flex-direction: column;
-  /* background-image: url('../images/zu-background.png'); */
+  background-image: url('../images/zu-background.png');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center; */
   background-color: var(--primary-color);
 }
 
