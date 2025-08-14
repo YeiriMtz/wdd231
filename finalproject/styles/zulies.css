@@ -517,7 +517,7 @@ footer {
     text-align: center;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .random-quote {
     max-width: 85%;
     padding: 0.5rem;
