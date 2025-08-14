@@ -326,6 +326,12 @@ button:hover,
   text-align: center;
   background-color: var(--boxes-background);
   max-width: 91.5%;
+  font-family: var(--primary-text);
+  font-size: larger;
+}
+
+.random-quote p {
+  font-style: italic;
 }
 
 /* GALLERY PAGE */
