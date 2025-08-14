@@ -517,6 +517,15 @@ footer {
     text-align: center;
 }
 
+@media (max-width: 600px) {
+  .random-quote {
+    max-width: 75%;
+    padding: 0.5rem;
+    margin: 1% auto; 
+    font-size: 0.9rem;
+  }
+}
+
   /* Medium screens: 2 columns */
 @media (max-width: 900px) {
   .footer-container {
