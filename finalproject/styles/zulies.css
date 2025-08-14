@@ -319,8 +319,13 @@ button:hover,
   color: var(--primary-color);
 } 
 
-.api-demo {
+.random-quote { 
+  padding: 1rem;
+  margin: 1% auto;
+  box-shadow: 0 2px 8px rgba(45, 48, 48, 0.734);
   text-align: center;
+  background-color: var(--boxes-background);
+  max-width: 91.5%;
 }
 
 /* GALLERY PAGE */
