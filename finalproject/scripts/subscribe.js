@@ -7,7 +7,7 @@ document.getElementById('subscribeForm').addEventListener('submit', function(e) 
   if (name && email) {
     localStorage.setItem('subscriberName', name);
     localStorage.setItem('subscriberEmail', email);
-    window.location.href = 'thankyou.html';  // Adjust path if needed
+    window.location.href = 'thankyou.html';
   } else {
     alert('Please enter both your name and email.');
   }

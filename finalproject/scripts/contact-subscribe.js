@@ -8,10 +8,8 @@ document.getElementById('subscribeForm').addEventListener('submit', function(eve
   const purposeInput = document.querySelector('input[name="purpose"]:checked');
   const message = document.getElementById('message').value.trim();
 
-  // Simple email regex for basic validation
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  // Validation checks
   if (!firstName) {
     alert('Please enter your first name.');
     return;
@@ -33,7 +31,6 @@ document.getElementById('subscribeForm').addEventListener('submit', function(eve
     return;
   }
 
-  // If all validations pass, encode and redirect
   const params = new URLSearchParams({
     firstName: encodeURIComponent(firstName),
     lastName: encodeURIComponent(lastName),
