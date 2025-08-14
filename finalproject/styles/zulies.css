@@ -389,6 +389,16 @@ footer {
   text-decoration: none !important;
 }
 
+.video-link {
+  text-align: center;
+  color: white;
+}
+
+.video-link a {
+  text-decoration: none;
+  color: white;
+}
+
 /* ===== MOBILE STYLES ===== */
 @media screen and (max-width: 768px) {
   header {
