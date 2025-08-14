@@ -23,7 +23,6 @@ if (hamburger && navLinks) {
 }
 
 // Random quote (Homepage)
-
 async function getRandomQuote() {
   try {
     const response = await fetch('data/quotes.json');
