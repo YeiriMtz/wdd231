@@ -223,7 +223,7 @@ header h1 {
   margin: 0;
   text-align: left;
   color: var(--secondary-color);
-  margin-bottom: 1em; /* or adjust to your liking */
+  margin-bottom: 1em;
 }
 
 .get-in-touch h3{
@@ -318,6 +318,10 @@ button:hover,
   background-color: rgb(27, 134, 45);
   color: var(--primary-color);
 } 
+
+.api-demo {
+  text-align: center;
+}
 
 /* GALLERY PAGE */
 .gallery {
