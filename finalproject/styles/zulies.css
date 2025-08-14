@@ -519,7 +519,7 @@ footer {
 
 @media (max-width: 600px) {
   .random-quote {
-    max-width: 75%;
+    max-width: 85%;
     padding: 0.5rem;
     margin: 1% auto; 
     font-size: 0.9rem;
